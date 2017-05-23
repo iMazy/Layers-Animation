@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.tableFooterView = UIView()
-        tableView.rowHeight = 60
+        tableView.rowHeight = 64
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -50,15 +50,17 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "ClassCell")
-        if cell == nil {
-            cell = UITableViewCell(style: .subtitle, reuseIdentifier: "ClassCell")
-            cell?.accessoryType = .disclosureIndicator
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ClassCell")!
         let row = indexPath.row
-        cell?.textLabel?.text = classes[row].0
-        cell?.detailTextLabel?.text = classes[row].1
-        return cell!
+        cell.textLabel?.text = classes[row].0
+        cell.detailTextLabel?.text = classes[row].1
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        
     }
 }
 
