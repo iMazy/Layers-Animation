@@ -40,6 +40,9 @@ class ViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        // 让下一级页面的返回按钮只显示图标
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     }
 
 }
@@ -60,7 +63,9 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        
+        let identifier = classes[indexPath.row].0
+        let targetVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: identifier)
+        navigationController?.show(targetVC, sender: nil)
     }
 }
 

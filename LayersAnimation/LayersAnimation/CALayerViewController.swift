@@ -10,26 +10,39 @@ import UIKit
 
 class CALayerViewController: UIViewController {
 
+    @IBOutlet weak var viewForLayer: UIView!
+    
+    let layer = CALayer()
+    let iconImage = UIImage(named: "horse")?.cgImage
+    
+    func setupLayer() {
+        layer.frame = viewForLayer.bounds
+        layer.contents =  iconImage
+        layer.contentsGravity = kCAGravityCenter
+        layer.isGeometryFlipped = false
+        layer.cornerRadius =  100
+        layer.borderWidth = 12.0
+        layer.borderColor = UIColor.white.cgColor
+        layer.backgroundColor = globalColor.cgColor
+        layer.shadowOpacity = 0.75
+        layer.shadowOffset = CGSize(width: 0, height: 3)
+        layer.shadowRadius = 3.0
+        layer.magnificationFilter = kCAFilterLinear
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        setupLayer()
+        viewForLayer.layer.addSublayer(layer)
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // 传递参数
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "DisplayLayerControls" {
+            (segue.destination as! CALayerControlsController).layerViewController = self
+        }
     }
-    */
 
 }
