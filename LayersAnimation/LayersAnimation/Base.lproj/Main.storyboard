@@ -285,12 +285,20 @@
                                                         <constraint firstAttribute="width" constant="120" id="DDx-p0-LLQ"/>
                                                     </constraints>
                                                 </slider>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56f-UD-64b">
+                                                    <rect key="frame" x="197" y="14.5" width="33" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.34349766370000001" green="0.81139522789999996" blue="0.86287134889999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Qch-kq-YhD" firstAttribute="centerY" secondItem="vML-7v-STT" secondAttribute="centerY" id="DcS-vv-Lrt"/>
                                                 <constraint firstAttribute="trailing" secondItem="Qch-kq-YhD" secondAttribute="trailing" constant="20" id="d3f-Ka-jWx"/>
+                                                <constraint firstItem="56f-UD-64b" firstAttribute="centerY" secondItem="vML-7v-STT" secondAttribute="centerY" id="dBX-me-DyQ"/>
                                                 <constraint firstItem="kpT-0U-59u" firstAttribute="centerY" secondItem="vML-7v-STT" secondAttribute="centerY" id="dKw-IK-CeN"/>
                                                 <constraint firstItem="kpT-0U-59u" firstAttribute="leading" secondItem="vML-7v-STT" secondAttribute="leading" constant="20" id="fkk-Xc-zVt"/>
+                                                <constraint firstItem="Qch-kq-YhD" firstAttribute="leading" secondItem="56f-UD-64b" secondAttribute="trailing" constant="5" id="nqy-25-IUz"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -314,9 +322,17 @@
                                                         <constraint firstAttribute="width" constant="120" id="bDt-ni-oaN"/>
                                                     </constraints>
                                                 </slider>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wh2-9x-sgT">
+                                                    <rect key="frame" x="197" y="14" width="33" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.34349766370000001" green="0.81139522789999996" blue="0.86287134889999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="Wh2-9x-sgT" firstAttribute="centerY" secondItem="gdZ-iu-7uH" secondAttribute="centerY" id="NWM-NR-mhm"/>
                                                 <constraint firstItem="fU5-bb-3ZK" firstAttribute="leading" secondItem="gdZ-iu-7uH" secondAttribute="leading" constant="20" id="Vtz-aT-bHs"/>
+                                                <constraint firstItem="Tau-Dp-136" firstAttribute="leading" secondItem="Wh2-9x-sgT" secondAttribute="trailing" constant="5" id="dit-pt-8Dq"/>
                                                 <constraint firstItem="fU5-bb-3ZK" firstAttribute="centerY" secondItem="gdZ-iu-7uH" secondAttribute="centerY" id="exP-55-nSw"/>
                                                 <constraint firstAttribute="trailing" secondItem="Tau-Dp-136" secondAttribute="trailing" constant="20" id="oLL-ww-if9"/>
                                                 <constraint firstItem="Tau-Dp-136" firstAttribute="centerY" secondItem="gdZ-iu-7uH" secondAttribute="centerY" id="reQ-yo-fR2"/>
@@ -342,13 +358,21 @@
                                                         <constraint firstAttribute="width" constant="120" id="isg-bX-kHK"/>
                                                     </constraints>
                                                 </slider>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQP-eR-I3C">
+                                                    <rect key="frame" x="197" y="14" width="33" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.34349766370000001" green="0.81139522789999996" blue="0.86287134889999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="tintColor" red="0.18734195828437805" green="0.8161047101020813" blue="0.87222248315811157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="1g9-40-bdW" firstAttribute="leading" secondItem="mo7-Tq-58Z" secondAttribute="leading" constant="20" id="288-e8-jBz"/>
+                                                <constraint firstItem="cv5-FI-fyx" firstAttribute="leading" secondItem="sQP-eR-I3C" secondAttribute="trailing" constant="5" id="J0F-fa-P51"/>
                                                 <constraint firstAttribute="trailing" secondItem="cv5-FI-fyx" secondAttribute="trailing" constant="20" id="JpG-5o-dIj"/>
                                                 <constraint firstItem="1g9-40-bdW" firstAttribute="centerY" secondItem="mo7-Tq-58Z" secondAttribute="centerY" id="Sbk-ym-k4a"/>
                                                 <constraint firstItem="cv5-FI-fyx" firstAttribute="centerY" secondItem="mo7-Tq-58Z" secondAttribute="centerY" id="geJ-sl-Wk1"/>
+                                                <constraint firstItem="sQP-eR-I3C" firstAttribute="centerY" secondItem="mo7-Tq-58Z" secondAttribute="centerY" id="l36-g8-raE"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -479,9 +503,17 @@
                                                         <constraint firstAttribute="width" constant="120" id="Grb-l9-wt0"/>
                                                     </constraints>
                                                 </slider>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YG-kp-oK5">
+                                                    <rect key="frame" x="197" y="14" width="33" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.34349766370000001" green="0.81139522789999996" blue="0.86287134889999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="N3V-eO-Vhz" secondAttribute="trailing" constant="20" id="Ls4-kG-rtM"/>
+                                                <constraint firstItem="5YG-kp-oK5" firstAttribute="centerY" secondItem="MXv-7f-vvY" secondAttribute="centerY" id="NGW-yE-B2b"/>
+                                                <constraint firstItem="N3V-eO-Vhz" firstAttribute="leading" secondItem="5YG-kp-oK5" secondAttribute="trailing" constant="5" id="VFA-Tf-5qx"/>
                                                 <constraint firstItem="K6y-Q5-O1c" firstAttribute="centerY" secondItem="MXv-7f-vvY" secondAttribute="centerY" id="YDj-JD-gnC"/>
                                                 <constraint firstItem="N3V-eO-Vhz" firstAttribute="centerY" secondItem="MXv-7f-vvY" secondAttribute="centerY" id="Ymg-Kf-REg"/>
                                                 <constraint firstItem="K6y-Q5-O1c" firstAttribute="leading" secondItem="MXv-7f-vvY" secondAttribute="leading" constant="20" id="vhc-YP-56I"/>
@@ -556,11 +588,19 @@
                                                         <constraint firstAttribute="width" constant="120" id="Ojg-Nz-Tvo"/>
                                                     </constraints>
                                                 </slider>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtE-gp-TTY">
+                                                    <rect key="frame" x="197" y="14" width="33" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.34349766370000001" green="0.81139522789999996" blue="0.86287134889999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="bOE-0M-LCf" firstAttribute="leading" secondItem="slE-WQ-A41" secondAttribute="leading" constant="20" id="BEo-og-GEA"/>
                                                 <constraint firstAttribute="trailing" secondItem="o4H-bh-PRC" secondAttribute="trailing" constant="20" id="HRT-3e-Df6"/>
+                                                <constraint firstItem="o4H-bh-PRC" firstAttribute="leading" secondItem="vtE-gp-TTY" secondAttribute="trailing" constant="5" id="HUY-5H-9Ur"/>
                                                 <constraint firstItem="bOE-0M-LCf" firstAttribute="centerY" secondItem="slE-WQ-A41" secondAttribute="centerY" id="NaY-Ev-2vM"/>
+                                                <constraint firstItem="vtE-gp-TTY" firstAttribute="centerY" secondItem="slE-WQ-A41" secondAttribute="centerY" id="k2p-hG-7oD"/>
                                                 <constraint firstItem="o4H-bh-PRC" firstAttribute="centerY" secondItem="slE-WQ-A41" secondAttribute="centerY" id="tzz-Vm-JzK"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -664,6 +704,39 @@
                     </tableView>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="backgroundColorSlidersValueLabel" destination="Djf-jS-bO9" id="6UT-Yl-mIL"/>
+                        <outlet property="borderColorSlidersValueLabel" destination="JAw-vO-EEk" id="RmB-v0-UUt"/>
+                        <outlet property="contentsGravityPicker" destination="5ll-aj-w7d" id="p6E-gw-Buc"/>
+                        <outlet property="contentsGravityPickerValueLabel" destination="l4m-8g-a0u" id="3SP-2l-RSW"/>
+                        <outlet property="magnificationFilterSegmentedControl" destination="W0Q-fj-pHO" id="cI8-PE-oeh"/>
+                        <outlet property="shadowColorSlidersValueLabel" destination="KFf-kS-Qbq" id="vEn-NG-LIB"/>
+                        <outlet property="shadowOffsetSlidersValueLabel" destination="mFZ-Jz-wGm" id="C12-kd-UwA"/>
+                        <outletCollection property="switches" destination="bBk-nR-tx3" collectionClass="NSMutableArray" id="vsM-4b-Pre"/>
+                        <outletCollection property="switches" destination="Eg9-ED-1Oy" collectionClass="NSMutableArray" id="5ir-jJ-0TD"/>
+                        <outletCollection property="switches" destination="hIk-cp-52L" collectionClass="NSMutableArray" id="6rE-lV-2dX"/>
+                        <outletCollection property="sliderValueLabels" destination="56f-UD-64b" collectionClass="NSMutableArray" id="F92-Dx-ETC"/>
+                        <outletCollection property="sliderValueLabels" destination="Wh2-9x-sgT" collectionClass="NSMutableArray" id="PLX-C1-ZMy"/>
+                        <outletCollection property="sliderValueLabels" destination="sQP-eR-I3C" collectionClass="NSMutableArray" id="bko-Rn-eY5"/>
+                        <outletCollection property="sliderValueLabels" destination="5YG-kp-oK5" collectionClass="NSMutableArray" id="jkQ-tF-8H6"/>
+                        <outletCollection property="sliderValueLabels" destination="vtE-gp-TTY" collectionClass="NSMutableArray" id="rMy-1m-9sK"/>
+                        <outletCollection property="sliders" destination="Qch-kq-YhD" collectionClass="NSMutableArray" id="L4m-a1-9FK"/>
+                        <outletCollection property="sliders" destination="Tau-Dp-136" collectionClass="NSMutableArray" id="Ypy-9o-8pa"/>
+                        <outletCollection property="sliders" destination="cv5-FI-fyx" collectionClass="NSMutableArray" id="TBa-uR-8x2"/>
+                        <outletCollection property="sliders" destination="N3V-eO-Vhz" collectionClass="NSMutableArray" id="4nw-yF-Kir"/>
+                        <outletCollection property="sliders" destination="o4H-bh-PRC" collectionClass="NSMutableArray" id="kBN-qf-xeI"/>
+                        <outletCollection property="borderColorSliders" destination="hba-Y0-AuH" collectionClass="NSMutableArray" id="hAt-vY-ghy"/>
+                        <outletCollection property="borderColorSliders" destination="bCh-qz-4Tt" collectionClass="NSMutableArray" id="wCE-9w-Rzi"/>
+                        <outletCollection property="borderColorSliders" destination="47H-p9-Mcp" collectionClass="NSMutableArray" id="aJG-1r-gMB"/>
+                        <outletCollection property="backgroundColorSliders" destination="shc-50-GvN" collectionClass="NSMutableArray" id="XeE-NZ-Mds"/>
+                        <outletCollection property="backgroundColorSliders" destination="oKk-PY-PRH" collectionClass="NSMutableArray" id="GUN-ys-Q5G"/>
+                        <outletCollection property="backgroundColorSliders" destination="aZE-ZY-XIn" collectionClass="NSMutableArray" id="3Z0-B2-Clg"/>
+                        <outletCollection property="shadowOffsetSliders" destination="XXs-hk-S9f" collectionClass="NSMutableArray" id="y6u-pC-U24"/>
+                        <outletCollection property="shadowOffsetSliders" destination="8p7-8y-Ehc" collectionClass="NSMutableArray" id="xiX-cH-F9M"/>
+                        <outletCollection property="shadowColorSliders" destination="wCB-1X-mlq" collectionClass="NSMutableArray" id="uAD-HV-0Rd"/>
+                        <outletCollection property="shadowColorSliders" destination="7ac-mR-vez" collectionClass="NSMutableArray" id="ykd-BD-itl"/>
+                        <outletCollection property="shadowColorSliders" destination="Tdb-FP-1OS" collectionClass="NSMutableArray" id="2cd-O7-tDD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HeS-8d-LH2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
