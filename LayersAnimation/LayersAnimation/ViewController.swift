@@ -65,6 +65,7 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate {
         
         let identifier = classes[indexPath.row].0
         let targetVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: identifier)
+        targetVC.title = identifier
         navigationController?.show(targetVC, sender: nil)
     }
 }

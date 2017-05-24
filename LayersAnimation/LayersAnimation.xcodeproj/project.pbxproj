@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21443D291ED56E1700D3EDE5 /* ScrollingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21443D281ED56E1700D3EDE5 /* ScrollingView.swift */; };
+		21443D2C1ED574B200D3EDE5 /* CAScrollLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21443D2B1ED574B200D3EDE5 /* CAScrollLayerController.swift */; };
 		2179383A1ED2E88A007DBE43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217938391ED2E88A007DBE43 /* AppDelegate.swift */; };
 		2179383C1ED2E88A007DBE43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2179383B1ED2E88A007DBE43 /* ViewController.swift */; };
 		2179383F1ED2E88A007DBE43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2179383D1ED2E88A007DBE43 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21443D281ED56E1700D3EDE5 /* ScrollingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingView.swift; sourceTree = "<group>"; };
+		21443D2B1ED574B200D3EDE5 /* CAScrollLayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAScrollLayerController.swift; sourceTree = "<group>"; };
 		217938361ED2E88A007DBE43 /* LayersAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayersAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		217938391ED2E88A007DBE43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2179383B1ED2E88A007DBE43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21443D2A1ED56E2200D3EDE5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2179383D1ED2E88A007DBE43 /* Main.storyboard */,
+				21443D281ED56E1700D3EDE5 /* ScrollingView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		2179382D1ED2E889007DBE43 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				2179384D1ED2E97C007DBE43 /* AppDelegate */,
+				21443D2A1ED56E2200D3EDE5 /* Views */,
 				2179384C1ED2E969007DBE43 /* ViewControllers */,
 				2179384B1ED2E955007DBE43 /* SystemFile */,
 			);
@@ -71,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				2179384E1ED2EE17007DBE43 /* UIImage+TileCutter.swift */,
-				2179383D1ED2E88A007DBE43 /* Main.storyboard */,
 				217938401ED2E88A007DBE43 /* Assets.xcassets */,
 				217938421ED2E88A007DBE43 /* LaunchScreen.storyboard */,
 				217938451ED2E88A007DBE43 /* Info.plist */,
@@ -85,6 +98,7 @@
 				2179383B1ED2E88A007DBE43 /* ViewController.swift */,
 				21C286201ED3C264009D65D0 /* CALayerViewController.swift */,
 				644F69991ED46B6100B53943 /* CALayerControlsController.swift */,
+				21443D2B1ED574B200D3EDE5 /* CAScrollLayerController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -169,6 +183,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21443D2C1ED574B200D3EDE5 /* CAScrollLayerController.swift in Sources */,
+				21443D291ED56E1700D3EDE5 /* ScrollingView.swift in Sources */,
 				2179383C1ED2E88A007DBE43 /* ViewController.swift in Sources */,
 				2179384F1ED2EE17007DBE43 /* UIImage+TileCutter.swift in Sources */,
 				644F699A1ED46B6100B53943 /* CALayerControlsController.swift in Sources */,

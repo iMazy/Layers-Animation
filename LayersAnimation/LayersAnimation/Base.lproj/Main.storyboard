@@ -132,6 +132,100 @@
             </objects>
             <point key="canvasLocation" x="1753" y="137"/>
         </scene>
+        <!--Scroll Layer Controller-->
+        <scene sceneID="A4t-ha-W7c">
+            <objects>
+                <viewController storyboardIdentifier="CAScrollLayer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zhD-zi-euh" customClass="CAScrollLayerController" customModule="LayersAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y32-ua-9yp"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vq7-vg-CKI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ljp-tH-y6J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gB1-Js-vyp" customClass="ScrollingView" customModule="LayersAnimation" customModuleProvider="target">
+                                <rect key="frame" x="62.5" y="120" width="250" height="250"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lion" translatesAutoresizingMaskIntoConstraints="NO" id="VZa-YD-uJ5">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="01l-Tb-R2c"/>
+                                    <constraint firstItem="VZa-YD-uJ5" firstAttribute="top" secondItem="gB1-Js-vyp" secondAttribute="top" id="HJG-mg-IX8"/>
+                                    <constraint firstAttribute="trailing" secondItem="VZa-YD-uJ5" secondAttribute="trailing" id="OIc-E4-eko"/>
+                                    <constraint firstItem="VZa-YD-uJ5" firstAttribute="leading" secondItem="gB1-Js-vyp" secondAttribute="leading" id="Ru5-rc-oKB"/>
+                                    <constraint firstAttribute="bottom" secondItem="VZa-YD-uJ5" secondAttribute="bottom" id="SX6-q4-g4t"/>
+                                    <constraint firstAttribute="width" constant="250" id="Slf-Da-XP0"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Ba2-K8-9YU" appends="YES" id="P9Z-Er-pMr"/>
+                                </connections>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yac-AF-KTg">
+                                <rect key="frame" x="84.5" y="390" width="206" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horizontal scrolling" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQJ-vO-ZYP">
+                                        <rect key="frame" x="0.0" y="0.0" width="147" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="exA-Px-ydA">
+                                        <rect key="frame" x="157" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="scrollingSwitchChanged:" destination="zhD-zi-euh" eventType="valueChanged" id="eLl-nQ-fG7"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lMt-of-Ff5">
+                                <rect key="frame" x="105" y="431" width="185.5" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vertical scrolling" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vu-nU-iGE">
+                                        <rect key="frame" x="0.0" y="0.0" width="126.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sBo-EX-gBJ">
+                                        <rect key="frame" x="136.5" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="scrollingSwitchChanged:" destination="zhD-zi-euh" eventType="valueChanged" id="LbT-6G-Py1"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yac-AF-KTg" firstAttribute="top" secondItem="gB1-Js-vyp" secondAttribute="bottom" constant="20" id="6BC-Xh-ch8"/>
+                            <constraint firstItem="gB1-Js-vyp" firstAttribute="top" secondItem="Y32-ua-9yp" secondAttribute="bottom" constant="100" id="NPM-Yr-C7E"/>
+                            <constraint firstItem="gB1-Js-vyp" firstAttribute="centerX" secondItem="ljp-tH-y6J" secondAttribute="centerX" id="W3v-y3-jpM"/>
+                            <constraint firstItem="yac-AF-KTg" firstAttribute="centerX" secondItem="ljp-tH-y6J" secondAttribute="centerX" id="kLH-pt-39J"/>
+                            <constraint firstItem="lMt-of-Ff5" firstAttribute="top" secondItem="yac-AF-KTg" secondAttribute="bottom" constant="10" id="obF-YK-kpd"/>
+                            <constraint firstItem="lMt-of-Ff5" firstAttribute="trailing" secondItem="yac-AF-KTg" secondAttribute="trailing" id="sQ9-Uz-0xi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="horizontalScrollingSwitch" destination="exA-Px-ydA" id="8lh-WJ-Ka3"/>
+                        <outlet property="scrollLayerView" destination="gB1-Js-vyp" id="i9t-jZ-Wqh"/>
+                        <outlet property="verticalScrollingSwitch" destination="sBo-EX-gBJ" id="xxI-zc-jdc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ew5-Gy-s89" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Ba2-K8-9YU">
+                    <connections>
+                        <action selector="panGesture:" destination="zhD-zi-euh" id="4l7-of-VrI"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1732" y="819.94002998500753"/>
+        </scene>
         <!--Layer Controls Controller-->
         <scene sceneID="V8N-7b-wVz">
             <objects>
@@ -822,6 +916,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Lion" width="3200" height="2000"/>
         <image name="horse" width="80" height="80"/>
     </resources>
 </document>
