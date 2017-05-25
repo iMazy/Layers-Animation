@@ -144,10 +144,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gB1-Js-vyp" customClass="ScrollingView" customModule="LayersAnimation" customModuleProvider="target">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gB1-Js-vyp" customClass="ScrollingView" customModule="LayersAnimation" customModuleProvider="target">
                                 <rect key="frame" x="62.5" y="120" width="250" height="250"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lion" translatesAutoresizingMaskIntoConstraints="NO" id="VZa-YD-uJ5">
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RicePaddy" translatesAutoresizingMaskIntoConstraints="NO" id="VZa-YD-uJ5">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                                         <gestureRecognizers/>
                                     </imageView>
@@ -177,6 +177,8 @@
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="exA-Px-ydA">
                                         <rect key="frame" x="157" y="0.0" width="51" height="31"/>
+                                        <color key="tintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="onTintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="scrollingSwitchChanged:" destination="zhD-zi-euh" eventType="valueChanged" id="eLl-nQ-fG7"/>
                                         </connections>
@@ -194,9 +196,27 @@
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sBo-EX-gBJ">
                                         <rect key="frame" x="136.5" y="0.0" width="51" height="31"/>
+                                        <color key="tintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="onTintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="scrollingSwitchChanged:" destination="zhD-zi-euh" eventType="valueChanged" id="LbT-6G-Py1"/>
                                         </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HWe-Vx-QZA">
+                                <rect key="frame" x="106" y="492" width="184.5" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto Back home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HG9-Z7-vbI">
+                                        <rect key="frame" x="0.0" y="0.0" width="125.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r1a-bQ-Ip5">
+                                        <rect key="frame" x="135.5" y="0.0" width="51" height="31"/>
+                                        <color key="tintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="onTintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </switch>
                                 </subviews>
                             </stackView>
@@ -205,13 +225,16 @@
                         <constraints>
                             <constraint firstItem="yac-AF-KTg" firstAttribute="top" secondItem="gB1-Js-vyp" secondAttribute="bottom" constant="20" id="6BC-Xh-ch8"/>
                             <constraint firstItem="gB1-Js-vyp" firstAttribute="top" secondItem="Y32-ua-9yp" secondAttribute="bottom" constant="100" id="NPM-Yr-C7E"/>
+                            <constraint firstItem="HWe-Vx-QZA" firstAttribute="trailing" secondItem="sBo-EX-gBJ" secondAttribute="trailing" id="SjU-gp-2LY"/>
                             <constraint firstItem="gB1-Js-vyp" firstAttribute="centerX" secondItem="ljp-tH-y6J" secondAttribute="centerX" id="W3v-y3-jpM"/>
+                            <constraint firstItem="HWe-Vx-QZA" firstAttribute="top" secondItem="lMt-of-Ff5" secondAttribute="bottom" constant="30" id="elu-Gk-GQA"/>
                             <constraint firstItem="yac-AF-KTg" firstAttribute="centerX" secondItem="ljp-tH-y6J" secondAttribute="centerX" id="kLH-pt-39J"/>
                             <constraint firstItem="lMt-of-Ff5" firstAttribute="top" secondItem="yac-AF-KTg" secondAttribute="bottom" constant="10" id="obF-YK-kpd"/>
                             <constraint firstItem="lMt-of-Ff5" firstAttribute="trailing" secondItem="yac-AF-KTg" secondAttribute="trailing" id="sQ9-Uz-0xi"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="autoBackToHomeSwitch" destination="r1a-bQ-Ip5" id="ytQ-ib-jeu"/>
                         <outlet property="horizontalScrollingSwitch" destination="exA-Px-ydA" id="8lh-WJ-Ka3"/>
                         <outlet property="scrollLayerView" destination="gB1-Js-vyp" id="i9t-jZ-Wqh"/>
                         <outlet property="verticalScrollingSwitch" destination="sBo-EX-gBJ" id="xxI-zc-jdc"/>
@@ -916,7 +939,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Lion" width="3200" height="2000"/>
+        <image name="RicePaddy" width="5120" height="2880"/>
         <image name="horse" width="80" height="80"/>
     </resources>
 </document>

@@ -14,6 +14,8 @@ class CAScrollLayerController: UIViewController {
     @IBOutlet weak var horizontalScrollingSwitch: UISwitch!
     @IBOutlet weak var verticalScrollingSwitch: UISwitch!
     
+    @IBOutlet weak var autoBackToHomeSwitch: UISwitch!
+    
     var scrollingViewLayer: CAScrollLayer {
         return scrollLayerView.layer as! CAScrollLayer
     }
@@ -34,11 +36,14 @@ class CAScrollLayerController: UIViewController {
         
         scrollingViewLayer.scroll(to: newPoint)
         
-        if sender.state == .ended {
-            UIView.animate(withDuration: 0.3, animations: { [unowned self] in
-                self.scrollingViewLayer.scroll(to: CGPoint.zero)
-            })
+        if autoBackToHomeSwitch.isOn {
+            if sender.state == .ended {
+                UIView.animate(withDuration: 0.3, animations: { [unowned self] in
+                    self.scrollingViewLayer.scroll(to: CGPoint.zero)
+                })
+            }
         }
+        
     }
     
     
@@ -54,6 +59,5 @@ class CAScrollLayerController: UIViewController {
             scrollingViewLayer.scrollMode = kCAScrollNone
         }
     }
-   
 
 }
