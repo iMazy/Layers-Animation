@@ -286,6 +286,9 @@
                                                             <segment title="Helvetica"/>
                                                             <segment title="Noteworthy Light"/>
                                                         </segments>
+                                                        <connections>
+                                                            <action selector="fontSegmentControlChanged:" destination="TTg-5t-vMm" eventType="valueChanged" id="yok-yl-BXY"/>
+                                                        </connections>
                                                     </segmentedControl>
                                                 </subviews>
                                             </stackView>
@@ -300,6 +303,9 @@
                                                     </label>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JyW-Ha-9Vc">
                                                         <rect key="frame" x="8" y="0.0" width="309" height="28"/>
+                                                        <connections>
+                                                            <action selector="fontSizeSliderValueChanged:" destination="TTg-5t-vMm" eventType="valueChanged" id="Rsb-TQ-TYN"/>
+                                                        </connections>
                                                     </slider>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrap text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjG-IR-X9S">
                                                         <rect key="frame" x="325" y="0.0" width="0.0" height="27"/>
@@ -309,6 +315,11 @@
                                                     </label>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qav-Y5-23s">
                                                         <rect key="frame" x="335" y="0.0" width="2" height="27"/>
+                                                        <color key="tintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="onTintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <connections>
+                                                            <action selector="wrapTextSwitchChanged:" destination="TTg-5t-vMm" eventType="valueChanged" id="xGv-xq-Upu"/>
+                                                        </connections>
                                                     </switch>
                                                 </subviews>
                                             </stackView>
@@ -329,6 +340,9 @@
                                                             <segment title="" image="align_just"/>
                                                             <segment title="" image="align_right"/>
                                                         </segments>
+                                                        <connections>
+                                                            <action selector="alignmentModeSegmentedControlChanged:" destination="TTg-5t-vMm" eventType="valueChanged" id="n0t-4h-hpo"/>
+                                                        </connections>
                                                     </segmentedControl>
                                                 </subviews>
                                             </stackView>
@@ -348,6 +362,9 @@
                                                             <segment title="Middle"/>
                                                             <segment title="End"/>
                                                         </segments>
+                                                        <connections>
+                                                            <action selector="truncationModeSegmentedControlChanged:" destination="TTg-5t-vMm" eventType="valueChanged" id="wK4-pc-9Y3"/>
+                                                        </connections>
                                                     </segmentedControl>
                                                 </subviews>
                                             </stackView>
@@ -365,7 +382,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="alignmentModeSegmentedControl" destination="u8u-2u-QvZ" id="PEo-xr-WrE"/>
+                        <outlet property="alignmentModeSegmentedControl" destination="uQF-VM-3XN" id="hPs-7k-xyH"/>
                         <outlet property="fontSizeSlider" destination="JyW-Ha-9Vc" id="mMd-Ko-Hod"/>
                         <outlet property="fontSizeSliderValueLabel" destination="X0a-fK-cN4" id="cpa-po-NTl"/>
                         <outlet property="truncationModeSegmentedControl" destination="u8u-2u-QvZ" id="blJ-3c-Mzu"/>

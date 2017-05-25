@@ -20,7 +20,7 @@ class CATextLayerController: UIViewController {
     
     
     
-    enum Font {
+    enum Font: Int {
         case helvatica, noteorthyLight
     }
     
@@ -34,7 +34,7 @@ class CATextLayerController: UIViewController {
     
     let textLayer = CATextLayer()
     
-    let fontSize: CGFloat = 24.0
+    var fontSize: CGFloat = 24.0
     let baseFontSize: CGFloat = 24.0
     
     var helveticaFont :AnyObject?
@@ -44,7 +44,10 @@ class CATextLayerController: UIViewController {
     
     func setupTextLayer() {
         textLayer.frame = viewForTextLayer.bounds
-        let string = "为什么原本亲密的关系会变淡？或许有人会说因为大家都忙'没时间联系'少见面…我在想~为什么没人敢坦诚的承认，是因为社会资源'地位'见识差距变大了。渐渐的你的苦闷他无法理解，他的彷徨在你而言是变相炫耀。两个人无话可说，只能叙旧，直到过去被反复咀嚼，淡而无味，又碍于情面怕被指责势利，还要勉强维持点赞的情分！许多曾经只能被拿来怀念，许多因恩面结的缘最后成了负担…我越来越觉得朋友是需要交换观点的，而不仅仅是交换感情的！能一直同路的人太少'所以珍惜每段路上的每个朋友，就算到了分岔口'温柔道别'谨记彼此的好！"
+        var string = ""
+        for _ in 1...10 {
+            string += "幸运，从来都是强者的谦辞。每个幸运者的背后，都有着与幸运无关的故事!\n"
+        }
         textLayer.string = string
         textLayer.font = helveticaFont
         textLayer.foregroundColor = UIColor.darkGray.cgColor
@@ -77,6 +80,74 @@ class CATextLayerController: UIViewController {
         textLayer.fontSize = fontSize
     }
     
+    @IBAction func fontSegmentControlChanged(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case Font.helvatica.rawValue:
+            textLayer.font = helveticaFont
+        case Font.noteorthyLight.rawValue:
+            textLayer.font = noteworkthyLigthFont
+        default: break
+        }
+    }
 
+    @IBAction func fontSizeSliderValueChanged(_ sender: UISlider) {
+        fontSizeSliderValueLabel.text = "\(Int(sender.value * 100.0))%"
+        fontSize = baseFontSize * CGFloat(sender.value)
+    }
+    
+    @IBAction func wrapTextSwitchChanged(_ sender: UISwitch) {
+        alignmentModeSegmentedControl.selectedSegmentIndex = AlignmentMode.left.rawValue
+        textLayer.alignmentMode = kCAAlignmentLeft
+        
+        if sender.isOn {
+            if let truncationMode = TruncationMode(rawValue: truncationModeSegmentedControl.selectedSegmentIndex) {
+                previouslySelectedTrunctionMode = truncationMode
+            }
+            truncationModeSegmentedControl.selectedSegmentIndex = UISegmentedControlNoSegment
+            textLayer.isWrapped = true
+        } else {
+            textLayer.isWrapped = false
+            truncationModeSegmentedControl.selectedSegmentIndex = previouslySelectedTrunctionMode.rawValue
+        }
+    }
+    
+    @IBAction func alignmentModeSegmentedControlChanged(_ sender: UISegmentedControl) {
+        wrapTextSwitch.isOn = true
+        textLayer.isWrapped = true
+        truncationModeSegmentedControl.selectedSegmentIndex = UISegmentedControlNoSegment
+        textLayer.truncationMode = kCATruncationNone
+        
+        switch sender.selectedSegmentIndex {
+        case AlignmentMode.left.rawValue:
+            textLayer.alignmentMode = kCAAlignmentLeft
+        case AlignmentMode.center.rawValue:
+            textLayer.alignmentMode = kCAAlignmentCenter
+        case AlignmentMode.justified.rawValue:
+            textLayer.alignmentMode = kCAAlignmentJustified
+        case AlignmentMode.right.rawValue:
+            textLayer.alignmentMode = kCAAlignmentRight
+        default:
+            textLayer.alignmentMode = kCAAlignmentLeft
+            break
+        }
+    }
+    
+    @IBAction func truncationModeSegmentedControlChanged(_ sender: UISegmentedControl) {
+        wrapTextSwitch.isOn = false
+        textLayer.isWrapped = false
+        alignmentModeSegmentedControl.selectedSegmentIndex = UISegmentedControlNoSegment
+        textLayer.alignmentMode = kCAAlignmentLeft
+        
+        switch sender.selectedSegmentIndex {
+        case TruncationMode.start.rawValue:
+            textLayer.truncationMode = kCATruncationStart
+        case TruncationMode.middle.rawValue:
+            textLayer.truncationMode = kCATruncationMiddle
+        case TruncationMode.end.rawValue:
+            textLayer.truncationMode = kCATruncationEnd
+        default:
+            textLayer.truncationMode = kCATruncationNone
+        }
+    }
    
 }
