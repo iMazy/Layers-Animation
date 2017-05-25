@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		21443D291ED56E1700D3EDE5 /* ScrollingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21443D281ED56E1700D3EDE5 /* ScrollingView.swift */; };
 		21443D2C1ED574B200D3EDE5 /* CAScrollLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21443D2B1ED574B200D3EDE5 /* CAScrollLayerController.swift */; };
+		21443D2E1ED6AFAA00D3EDE5 /* CATextLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21443D2D1ED6AFAA00D3EDE5 /* CATextLayerController.swift */; };
 		2179383A1ED2E88A007DBE43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217938391ED2E88A007DBE43 /* AppDelegate.swift */; };
 		2179383C1ED2E88A007DBE43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2179383B1ED2E88A007DBE43 /* ViewController.swift */; };
 		2179383F1ED2E88A007DBE43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2179383D1ED2E88A007DBE43 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		21443D281ED56E1700D3EDE5 /* ScrollingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingView.swift; sourceTree = "<group>"; };
 		21443D2B1ED574B200D3EDE5 /* CAScrollLayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAScrollLayerController.swift; sourceTree = "<group>"; };
+		21443D2D1ED6AFAA00D3EDE5 /* CATextLayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATextLayerController.swift; sourceTree = "<group>"; };
 		217938361ED2E88A007DBE43 /* LayersAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayersAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		217938391ED2E88A007DBE43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2179383B1ED2E88A007DBE43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				21C286201ED3C264009D65D0 /* CALayerViewController.swift */,
 				644F69991ED46B6100B53943 /* CALayerControlsController.swift */,
 				21443D2B1ED574B200D3EDE5 /* CAScrollLayerController.swift */,
+				21443D2D1ED6AFAA00D3EDE5 /* CATextLayerController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21443D2E1ED6AFAA00D3EDE5 /* CATextLayerController.swift in Sources */,
 				21443D2C1ED574B200D3EDE5 /* CAScrollLayerController.swift in Sources */,
 				21443D291ED56E1700D3EDE5 /* ScrollingView.swift in Sources */,
 				2179383C1ED2E88A007DBE43 /* ViewController.swift in Sources */,
