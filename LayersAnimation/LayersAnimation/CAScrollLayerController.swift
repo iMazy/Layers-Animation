@@ -27,6 +27,7 @@ class CAScrollLayerController: UIViewController {
     }
 
     
+    /// 手势
     @IBAction func panGesture (_ sender: UIPanGestureRecognizer) {
         
         var newPoint = scrollLayerView.bounds.origin
@@ -47,6 +48,7 @@ class CAScrollLayerController: UIViewController {
     }
     
     
+    /// switch 开关
     @IBAction func scrollingSwitchChanged(_ sender: UISwitch) {
         switch (horizontalScrollingSwitch.isOn, verticalScrollingSwitch.isOn) {
         case (true, true):

@@ -11,7 +11,7 @@ import AVFoundation
 
 class AVPlayerLayerController: UIViewController {
     
-    
+
     @IBOutlet weak var viewForPlayerLayer: UIView!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var rateSegmentControl: UISegmentedControl!
@@ -31,7 +31,7 @@ class AVPlayerLayerController: UIViewController {
     var shouldLoop = true
     var isPlaying = false
     
-    // 480*360 240*180 12*9 4*3
+    // 设置播放 layer
     func setupPlayerLayer() {
         playerLayer.frame = viewForPlayerLayer.bounds
         let url = Bundle.main.url(forResource: "demo", withExtension: "mp4")!
@@ -46,13 +46,16 @@ class AVPlayerLayerController: UIViewController {
         setupPlayerLayer()
         viewForPlayerLayer.layer.addSublayer(playerLayer)
         
+        /// 添加通知
         NotificationCenter.default.addObserver(self, selector: #selector(AVPlayerLayerController.playerDidReachEndNotificationHandler(_:)), name: NSNotification.Name(rawValue: "AVPlayerItemDidPlayToEndTimeNotification"), object: player.currentItem)
     }
     
+    /// 移除通知
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
     
+    /// 播放
     func play() {
         if playButton.titleLabel?.text == "Play" {
             if let resumeRate = rateBeforePause {
@@ -71,6 +74,7 @@ class AVPlayerLayerController: UIViewController {
         updateRateSegmentedControl()
     }
     
+    /// 更新按钮的 title
     func updatePlayButtonTitle() {
         if isPlaying {
             playButton.setTitle("Pause", for: .normal)
@@ -79,6 +83,8 @@ class AVPlayerLayerController: UIViewController {
         }
     }
     
+    
+    /// 更新进度控制
     func updateRateSegmentedControl() {
         if isPlaying {
             switch player.rate {
@@ -96,6 +102,8 @@ class AVPlayerLayerController: UIViewController {
         }
     }
     
+    
+    /// 播放结束通知
     func playerDidReachEndNotificationHandler(_ notification: Notification) {
         guard let playerItem = notification.object as? AVPlayerItem else {
             return
@@ -111,11 +119,12 @@ class AVPlayerLayerController: UIViewController {
     }
 
     
+    /// 播放暂停按钮
     @IBAction func playButtonAction(_ sender: UIButton) {
         play()
     }
 
-
+    /// 进度控制
     @IBAction func rateSegmentControlValueChanged(_ sender: UISegmentedControl) {
         var rate: Float!
         switch sender.selectedSegmentIndex {
@@ -133,7 +142,7 @@ class AVPlayerLayerController: UIViewController {
         updatePlayButtonTitle()
     }
 
-
+    /// 设置循环播放
     @IBAction func loopSwitchValueChanged(_ sender: UISwitch) {
         shouldLoop = sender.isOn
         if shouldLoop {
@@ -142,7 +151,7 @@ class AVPlayerLayerController: UIViewController {
             player.actionAtItemEnd = .pause
         }
     }
-
+    /// 设置声音
     @IBAction func volumeSliderValueChanged(_ sender: UISlider) {
         player.volume = sender.value
     }

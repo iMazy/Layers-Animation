@@ -163,6 +163,11 @@ class CALayerControlsController: UITableViewController {
         layerViewController.layer.magnificationFilter = filterValue
     }
     
+    
+    /// 通过数组设置颜色
+    ///
+    /// - Parameter sliders: 颜色数据, slider 控制
+    /// - Returns: 返回颜色 和 颜色字符串
     func colorAndLabelForSliders(_ sliders: [UISlider]) -> (color: CGColor, labelText: String) {
         
         var red: CGFloat = 0
@@ -183,11 +188,10 @@ class CALayerControlsController: UITableViewController {
         let labelText = "RGB: \(Int(red)), \(Int(green)), \(Int(blue))"
         return (color, labelText)
     }
-    
-    
-    
 }
 
+
+// MARK: - tableViewDelegate/dataSource
 extension CALayerControlsController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let row = Row(rawValue: indexPath.row)
@@ -209,9 +213,11 @@ extension CALayerControlsController {
         default:
             hideContentsGravityPicker()
         }
-        
     }
-    
+}
+
+extension CALayerControlsController {
+    /// 显示属性选择
     func showContentsGravityPicker() {
         contentsGravityPickerVisible = true
         relayoutTableViewCells()
@@ -225,6 +231,7 @@ extension CALayerControlsController {
         }
     }
     
+    /// 隐藏属性选择
     func hideContentsGravityPicker() {
         if contentsGravityPickerVisible {
             tableView.isUserInteractionEnabled = false
@@ -240,12 +247,15 @@ extension CALayerControlsController {
         }
     }
     
+    
+    /// 重新布局 cells
     func relayoutTableViewCells() {
         tableView.beginUpdates()
         tableView.endUpdates()
     }
 }
 
+// MARK: - UIPickerViewDelegate,UIPickerViewDataSource
 extension CALayerControlsController: UIPickerViewDelegate,UIPickerViewDataSource {
     @available(iOS 2.0, *)
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

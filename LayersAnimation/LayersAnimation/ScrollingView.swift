@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import QuartzCore
 
 class ScrollingView: UIView {
 
+    /// 重写 layerClass 方法,获取 UIView 的子 layer 
     override class var layerClass: AnyClass {
         return CAScrollLayer.self
     }

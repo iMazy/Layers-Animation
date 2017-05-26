@@ -10,11 +10,15 @@ import UIKit
 
 class CALayerViewController: UIViewController {
 
+    /// 存放 layer 的 view
     @IBOutlet weak var viewForLayer: UIView!
     
+    /// 自己的 Layer
     let layer = CALayer()
+    /// 给 layer 添加内容,这里是图片
     let iconImage = UIImage(named: "horse")?.cgImage
     
+    /// 设置 layer 属性
     func setupLayer() {
         layer.frame = viewForLayer.bounds
         layer.contents =  iconImage

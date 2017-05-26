@@ -19,29 +19,34 @@ class CATextLayerController: UIViewController {
     @IBOutlet weak var truncationModeSegmentedControl: UISegmentedControl!
     
     
-    
+    /// 字体
     enum Font: Int {
         case helvatica, noteorthyLight
     }
     
+    /// 对其方式
     enum AlignmentMode: Int {
         case left, center, justified, right
     }
     
+    /// 显示方式
     enum TruncationMode: Int {
         case start, middle, end
     }
     
+    /// 文本 layer
     let textLayer = CATextLayer()
-    
+    /// 字体大小
     var fontSize: CGFloat = 24.0
+    /// 基本字体大小
     let baseFontSize: CGFloat = 24.0
-    
+    /// 字体
     var helveticaFont :AnyObject?
     var noteworkthyLigthFont: AnyObject?
     
     var previouslySelectedTrunctionMode = TruncationMode.end
     
+    /// 设置 textLayer
     func setupTextLayer() {
         textLayer.frame = viewForTextLayer.bounds
         var string = ""
@@ -57,6 +62,7 @@ class CATextLayerController: UIViewController {
         textLayer.contentsScale = UIScreen.main.scale
     }
     
+    /// 创建字体
     func createFont() {
         var fontName: CFString = "Noteworthy-Light" as CFString
         noteworkthyLigthFont = CTFontCreateWithName(fontName, baseFontSize, nil)

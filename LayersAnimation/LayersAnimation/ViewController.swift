@@ -35,7 +35,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        // 取消底部多余的分割线
         tableView.tableFooterView = UIView()
+        // 设置默认 cell 的高度
         tableView.rowHeight = 64
         
         tableView.delegate = self
@@ -47,6 +50,7 @@ class ViewController: UIViewController {
 
 }
 
+// MARK: - UITableViewDataSource,UITableViewDelegate
 extension ViewController: UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return classes.count
