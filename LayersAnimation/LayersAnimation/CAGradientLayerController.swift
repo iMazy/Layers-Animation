@@ -9,7 +9,6 @@
 import UIKit
 
 class CAGradientLayerController: UIViewController {
-
     
     @IBOutlet weak var viewForGradientLayer: UIView!
     @IBOutlet weak var startLabel: UILabel!
@@ -22,13 +21,9 @@ class CAGradientLayerController: UIViewController {
     @IBOutlet weak var indigoLabel: UILabel!
     @IBOutlet weak var violetLabel: UILabel!
     
-    enum Direction: Int {
-        case start, end
-    }
+    var colors = [AnyObject]()
+    let locations: [Float] = [0, 1/6.0, 1/3.0, 1/2, 2/3.0, 5/6.0, 1.0]
     
-    enum color: Int {
-        case red, orange, yellow, green, blue, indigo, violet
-    }
     
     let gradientLayer = CAGradientLayer()
     
