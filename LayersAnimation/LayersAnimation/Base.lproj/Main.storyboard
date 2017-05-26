@@ -1082,6 +1082,107 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
+        <!--Player Layer Controller-->
+        <scene sceneID="vLe-pz-Nk9">
+            <objects>
+                <viewController id="6JB-30-LqQ" customClass="AVPlayerLayerController" customModule="LayersAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vfk-PJ-zjE"/>
+                        <viewControllerLayoutGuide type="bottom" id="ieS-Ds-gnD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LSf-Pt-CoM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Yf1-Dy-1C4">
+                                <rect key="frame" x="38" y="208.5" width="300" height="250"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYO-rO-QqO">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="169"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="169" id="Mdp-Ft-sZ7"/>
+                                            <constraint firstAttribute="width" constant="300" id="Uea-dz-ybp"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eRz-bQ-YxF">
+                                        <rect key="frame" x="0.0" y="179" width="300" height="30"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BbV-Nv-454">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMW-x1-G9k">
+                                                        <rect key="frame" x="0.0" y="0.0" width="40.5" height="30"/>
+                                                        <state key="normal" title="Play"/>
+                                                        <connections>
+                                                            <action selector="playButtonAction:" destination="6JB-30-LqQ" eventType="touchUpInside" id="pxS-WA-bYa"/>
+                                                        </connections>
+                                                    </button>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JV6-R1-UeF">
+                                                        <rect key="frame" x="50.5" y="0.0" width="249.5" height="31"/>
+                                                        <segments>
+                                                            <segment title="First"/>
+                                                            <segment title="Second"/>
+                                                            <segment title=""/>
+                                                        </segments>
+                                                        <connections>
+                                                            <action selector="rateSegmentControlValueChanged:" destination="6JB-30-LqQ" eventType="valueChanged" id="8xH-uU-4Ri"/>
+                                                        </connections>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3jX-PP-hyd">
+                                        <rect key="frame" x="0.0" y="219" width="300" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jh-XM-OV9">
+                                                <rect key="frame" x="0.0" y="0.0" width="37.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TxB-Ve-YaC">
+                                                <rect key="frame" x="47.5" y="0.0" width="49.5" height="31"/>
+                                                <connections>
+                                                    <action selector="loopSwitchValueChanged:" destination="6JB-30-LqQ" eventType="valueChanged" id="95I-IW-xWb"/>
+                                                </connections>
+                                            </switch>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47y-pQ-ca5">
+                                                <rect key="frame" x="105" y="0.0" width="56" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Ud-5c-PV8">
+                                                <rect key="frame" x="169" y="0.0" width="133" height="32"/>
+                                                <connections>
+                                                    <action selector="volumeSliderValueChanged:" destination="6JB-30-LqQ" eventType="valueChanged" id="edm-NQ-8dN"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Yf1-Dy-1C4" firstAttribute="centerY" secondItem="LSf-Pt-CoM" secondAttribute="centerY" id="DX8-ys-3A5"/>
+                            <constraint firstItem="Yf1-Dy-1C4" firstAttribute="centerX" secondItem="LSf-Pt-CoM" secondAttribute="centerX" id="ssc-c3-WWc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loopSwitch" destination="TxB-Ve-YaC" id="OTz-Fe-esZ"/>
+                        <outlet property="playButton" destination="CMW-x1-G9k" id="NKw-An-BEB"/>
+                        <outlet property="rateSegmentControl" destination="JV6-R1-UeF" id="wme-VF-j7F"/>
+                        <outlet property="viewForPlayerLayer" destination="dYO-rO-QqO" id="Clq-q8-iR2"/>
+                        <outlet property="volumeSlider" destination="9Ud-5c-PV8" id="RT8-Ld-TTM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CJT-iS-u35" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="866"/>
+        </scene>
     </scenes>
     <resources>
         <image name="RicePaddy" width="5120" height="2880"/>
