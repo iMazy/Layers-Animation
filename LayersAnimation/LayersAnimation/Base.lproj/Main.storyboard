@@ -1196,7 +1196,7 @@
         <!--Gradient Layer Controller-->
         <scene sceneID="rL1-27-U66">
             <objects>
-                <viewController storyboardIdentifier="CAGradientLayer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DJq-6t-7gA" customClass="CAGradientLayerController" customModule="LayersAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CAGradientLayer" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DJq-6t-7gA" customClass="CAGradientLayerController" customModule="LayersAnimation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fq9-Vk-G2s"/>
                         <viewControllerLayoutGuide type="bottom" id="N9Y-U8-dVJ"/>
@@ -1206,14 +1206,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rUl-mG-bZV">
-                                <rect key="frame" x="50" y="40" width="274" height="274"/>
+                                <rect key="frame" x="67" y="40" width="240" height="240"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="rUl-mG-bZV" secondAttribute="height" id="S6S-wE-IT7"/>
+                                    <constraint firstAttribute="height" constant="240" id="IFh-CT-ke5"/>
+                                    <constraint firstAttribute="width" secondItem="rUl-mG-bZV" secondAttribute="height" multiplier="1:1" id="paT-15-9qn"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QuC-v4-q5U">
-                                <rect key="frame" x="20" y="326" width="335" height="30"/>
+                                <rect key="frame" x="20" y="296" width="335" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1V-Li-Rgg">
                                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
@@ -1221,9 +1222,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tpL-jZ-O34">
+                                    <slider opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tpL-jZ-O34">
                                         <rect key="frame" x="3" y="0.0" width="159" height="31"/>
                                         <color key="tintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="startAndEedSliderValueChanged:" destination="DJq-6t-7gA" eventType="valueChanged" id="vnn-RE-gCZ"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(0.4,0.0)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rm-3c-tGr">
                                         <rect key="frame" x="165" y="0.0" width="0.0" height="30"/>
@@ -1237,9 +1241,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gsP-XK-6jR">
+                                    <slider opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gsP-XK-6jR">
                                         <rect key="frame" x="173" y="0.0" width="158.5" height="31"/>
                                         <color key="tintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="startAndEedSliderValueChanged:" destination="DJq-6t-7gA" eventType="valueChanged" id="X4x-ty-T0c"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(1.0,1.0)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCS-lY-dup">
                                         <rect key="frame" x="334.5" y="0.0" width="0.5" height="30"/>
@@ -1249,12 +1256,13 @@
                                     </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="61P-MH-VBQ"/>
                                     <constraint firstItem="gsP-XK-6jR" firstAttribute="width" secondItem="tpL-jZ-O34" secondAttribute="width" id="KMd-Yg-W8C"/>
                                     <constraint firstItem="TCS-lY-dup" firstAttribute="width" secondItem="7Rm-3c-tGr" secondAttribute="width" id="pw7-Wm-gN1"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vpr-lA-yBo">
-                                <rect key="frame" x="41.5" y="372" width="292" height="265"/>
+                                <rect key="frame" x="42" y="336" width="292" height="265"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kdz-TH-0my">
                                         <rect key="frame" x="0.0" y="0.0" width="292" height="31"/>
@@ -1269,6 +1277,9 @@
                                                 <rect key="frame" x="67" y="0.0" width="51" height="31"/>
                                                 <color key="tintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="onTintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="colorsSwitchValueChanged:" destination="DJq-6t-7gA" eventType="valueChanged" id="EC2-xa-xw3"/>
+                                                </connections>
                                             </switch>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="M7I-cv-fMY">
                                                 <rect key="frame" x="124" y="0.0" width="124" height="32"/>
@@ -1276,6 +1287,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="MbV-HL-zY0"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="colorSliderValueChanged:" destination="DJq-6t-7gA" eventType="valueChanged" id="Z1a-oR-wKu"/>
+                                                </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JT-cG-AAi">
                                                 <rect key="frame" x="256" y="0.0" width="36" height="31"/>
@@ -1302,6 +1316,9 @@
                                                 <rect key="frame" x="67" y="0.0" width="51" height="31"/>
                                                 <color key="tintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="onTintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="colorsSwitchValueChanged:" destination="DJq-6t-7gA" eventType="valueChanged" id="HQl-nC-6lf"/>
+                                                </connections>
                                             </switch>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.17000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vl9-WG-uhF">
                                                 <rect key="frame" x="124" y="0.0" width="124" height="32"/>
@@ -1309,6 +1326,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="aPl-fp-g9c"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="colorSliderValueChanged:" destination="DJq-6t-7gA" eventType="valueChanged" id="fRK-0b-chw"/>
+                                                </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhO-Fy-Bap">
                                                 <rect key="frame" x="256" y="0.0" width="36" height="31"/>
@@ -1335,6 +1355,9 @@
                                                 <rect key="frame" x="67" y="0.0" width="51" height="31"/>
                                                 <color key="tintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="onTintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="colorsSwitchValueChanged:" destination="DJq-6t-7gA" eventType="valueChanged" id="40F-J3-746"/>
+                                                </connections>
                                             </switch>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.33000000000000002" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MS2-0u-8hq">
                                                 <rect key="frame" x="124" y="0.0" width="124" height="32"/>
@@ -1342,6 +1365,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="FNd-bN-kTB"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="colorSliderValueChanged:" destination="DJq-6t-7gA" eventType="valueChanged" id="2H5-lc-Pdg"/>
+                                                </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vog-WD-Pn2">
                                                 <rect key="frame" x="256" y="0.0" width="36" height="31"/>
@@ -1368,6 +1394,9 @@
                                                 <rect key="frame" x="67" y="0.0" width="51" height="31"/>
                                                 <color key="tintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="onTintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="colorsSwitchValueChanged:" destination="DJq-6t-7gA" eventType="valueChanged" id="0Qt-ru-IcU"/>
+                                                </connections>
                                             </switch>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kxQ-bi-UF8">
                                                 <rect key="frame" x="124" y="0.0" width="124" height="32"/>
@@ -1375,6 +1404,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="oDr-6A-h4y"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="colorSliderValueChanged:" destination="DJq-6t-7gA" eventType="valueChanged" id="XWn-hw-4pG"/>
+                                                </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOr-o4-Zuc">
                                                 <rect key="frame" x="256" y="0.0" width="36" height="31"/>
@@ -1401,6 +1433,9 @@
                                                 <rect key="frame" x="67" y="0.0" width="51" height="31"/>
                                                 <color key="tintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="onTintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="colorsSwitchValueChanged:" destination="DJq-6t-7gA" eventType="valueChanged" id="ah6-a2-eF7"/>
+                                                </connections>
                                             </switch>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.67000000000000004" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fbC-qV-302">
                                                 <rect key="frame" x="124" y="0.0" width="124" height="32"/>
@@ -1408,6 +1443,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="Q2E-wl-dS5"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="colorSliderValueChanged:" destination="DJq-6t-7gA" eventType="valueChanged" id="dLi-Ae-lZ8"/>
+                                                </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJ9-oX-Zsy">
                                                 <rect key="frame" x="256" y="0.0" width="36" height="31"/>
@@ -1434,6 +1472,9 @@
                                                 <rect key="frame" x="67" y="0.0" width="51" height="31"/>
                                                 <color key="tintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="onTintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="colorsSwitchValueChanged:" destination="DJq-6t-7gA" eventType="valueChanged" id="USE-Fv-Oqk"/>
+                                                </connections>
                                             </switch>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.82999999999999996" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PKr-pZ-2CQ">
                                                 <rect key="frame" x="124" y="0.0" width="124" height="32"/>
@@ -1441,6 +1482,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="SOT-M2-a9D"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="colorSliderValueChanged:" destination="DJq-6t-7gA" eventType="valueChanged" id="KN9-f8-alk"/>
+                                                </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUp-uU-eDf">
                                                 <rect key="frame" x="256" y="0.0" width="36" height="31"/>
@@ -1467,6 +1511,9 @@
                                                 <rect key="frame" x="67" y="0.0" width="51" height="31"/>
                                                 <color key="tintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="onTintColor" red="0.1873419583" green="0.81610471009999996" blue="0.87222248319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="colorsSwitchValueChanged:" destination="DJq-6t-7gA" eventType="valueChanged" id="kKF-1x-mf1"/>
+                                                </connections>
                                             </switch>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zj3-pw-1ZM">
                                                 <rect key="frame" x="124" y="0.0" width="124" height="32"/>
@@ -1474,6 +1521,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="mkv-Nn-KKI"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="colorSliderValueChanged:" destination="DJq-6t-7gA" eventType="valueChanged" id="RPp-fG-skr"/>
+                                                </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIi-um-VlA">
                                                 <rect key="frame" x="256" y="0.0" width="36" height="31"/>
@@ -1492,16 +1542,27 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="N9Y-U8-dVJ" firstAttribute="top" secondItem="Vpr-lA-yBo" secondAttribute="bottom" constant="30" id="Lhh-Qx-ybX"/>
                             <constraint firstAttribute="trailing" secondItem="QuC-v4-q5U" secondAttribute="trailing" constant="20" id="ZaW-l0-6ph"/>
                             <constraint firstItem="Vpr-lA-yBo" firstAttribute="centerX" secondItem="F7E-TD-Dwr" secondAttribute="centerX" id="cBc-2P-5X0"/>
-                            <constraint firstItem="Vpr-lA-yBo" firstAttribute="top" secondItem="QuC-v4-q5U" secondAttribute="bottom" constant="16" id="kTc-iQ-ttx"/>
-                            <constraint firstItem="rUl-mG-bZV" firstAttribute="centerX" secondItem="F7E-TD-Dwr" secondAttribute="centerX" id="kkU-F1-jBQ"/>
-                            <constraint firstItem="QuC-v4-q5U" firstAttribute="top" secondItem="rUl-mG-bZV" secondAttribute="bottom" constant="12" id="x3p-v2-JeJ"/>
+                            <constraint firstItem="rUl-mG-bZV" firstAttribute="centerX" secondItem="F7E-TD-Dwr" secondAttribute="centerX" id="hCi-A5-z3v"/>
+                            <constraint firstItem="Vpr-lA-yBo" firstAttribute="top" secondItem="QuC-v4-q5U" secondAttribute="bottom" constant="10" id="kTc-iQ-ttx"/>
+                            <constraint firstItem="rUl-mG-bZV" firstAttribute="top" secondItem="fq9-Vk-G2s" secondAttribute="bottom" constant="20" id="xYT-KI-Dl0"/>
                             <constraint firstItem="QuC-v4-q5U" firstAttribute="leading" secondItem="F7E-TD-Dwr" secondAttribute="leading" constant="20" id="xad-Bu-T8d"/>
-                            <constraint firstItem="rUl-mG-bZV" firstAttribute="top" secondItem="fq9-Vk-G2s" secondAttribute="bottom" constant="20" id="zDK-jI-SiH"/>
+                            <constraint firstItem="QuC-v4-q5U" firstAttribute="top" secondItem="rUl-mG-bZV" secondAttribute="bottom" constant="16" id="xd4-Vq-rBQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueLabel" destination="rJ9-oX-Zsy" id="Kzh-NI-TBA"/>
+                        <outlet property="endLabel" destination="TCS-lY-dup" id="Fe7-ce-Xhw"/>
+                        <outlet property="greenLabel" destination="wOr-o4-Zuc" id="gGQ-Rf-oca"/>
+                        <outlet property="indigoLabel" destination="CUp-uU-eDf" id="Ggk-k2-stM"/>
+                        <outlet property="orangeLabel" destination="PhO-Fy-Bap" id="yuA-mi-Xen"/>
+                        <outlet property="redLabel" destination="7JT-cG-AAi" id="mla-JH-Gr2"/>
+                        <outlet property="startLabel" destination="7Rm-3c-tGr" id="E4G-4R-vj2"/>
+                        <outlet property="viewForGradientLayer" destination="rUl-mG-bZV" id="tcL-3x-r2k"/>
+                        <outlet property="violetLabel" destination="nIi-um-VlA" id="6SQ-oA-nlM"/>
+                        <outlet property="yellowLabel" destination="vog-WD-Pn2" id="RCg-Od-9QF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5C5-3F-dY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
