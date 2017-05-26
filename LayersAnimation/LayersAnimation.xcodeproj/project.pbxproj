@@ -11,6 +11,7 @@
 		21443D2C1ED574B200D3EDE5 /* CAScrollLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21443D2B1ED574B200D3EDE5 /* CAScrollLayerController.swift */; };
 		21443D2E1ED6AFAA00D3EDE5 /* CATextLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21443D2D1ED6AFAA00D3EDE5 /* CATextLayerController.swift */; };
 		21443D301ED7D41000D3EDE5 /* AVPlayerLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21443D2F1ED7D41000D3EDE5 /* AVPlayerLayerController.swift */; };
+		21443D321ED7D73400D3EDE5 /* demo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 21443D311ED7D73400D3EDE5 /* demo.mp4 */; };
 		2179383A1ED2E88A007DBE43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217938391ED2E88A007DBE43 /* AppDelegate.swift */; };
 		2179383C1ED2E88A007DBE43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2179383B1ED2E88A007DBE43 /* ViewController.swift */; };
 		2179383F1ED2E88A007DBE43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2179383D1ED2E88A007DBE43 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		21443D2B1ED574B200D3EDE5 /* CAScrollLayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAScrollLayerController.swift; sourceTree = "<group>"; };
 		21443D2D1ED6AFAA00D3EDE5 /* CATextLayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATextLayerController.swift; sourceTree = "<group>"; };
 		21443D2F1ED7D41000D3EDE5 /* AVPlayerLayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerLayerController.swift; sourceTree = "<group>"; };
+		21443D311ED7D73400D3EDE5 /* demo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = demo.mp4; sourceTree = "<group>"; };
 		217938361ED2E88A007DBE43 /* LayersAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayersAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		217938391ED2E88A007DBE43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2179383B1ED2E88A007DBE43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				2179384E1ED2EE17007DBE43 /* UIImage+TileCutter.swift */,
 				217938401ED2E88A007DBE43 /* Assets.xcassets */,
 				217938421ED2E88A007DBE43 /* LaunchScreen.storyboard */,
+				21443D311ED7D73400D3EDE5 /* demo.mp4 */,
 				217938451ED2E88A007DBE43 /* Info.plist */,
 			);
 			name = SystemFile;
@@ -176,6 +179,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21443D321ED7D73400D3EDE5 /* demo.mp4 in Resources */,
 				217938441ED2E88A007DBE43 /* LaunchScreen.storyboard in Resources */,
 				217938411ED2E88A007DBE43 /* Assets.xcassets in Resources */,
 				2179383F1ED2E88A007DBE43 /* Main.storyboard in Resources */,
