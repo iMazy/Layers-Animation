@@ -85,9 +85,10 @@ class CAReplicatorLayerController: UIViewController {
             instanceLayer.bounds = CGRect(x: 0, y: 0, width: value, height: value*lengthMultiplier)
             layerSizeLabel.text = String(format: "%.0f x %.0f", value, value * lengthMultiplier)
         case instanceCountSlider:
-            replicatorLayer.instanceCount = Int(sender.value)
+            replicatorLayer.instanceCount = Int(instanceCountSlider.value)
             replicatorLayer.instanceAlphaOffset = offsetValueForSwitch(offsetSwitch: fadeAlphaSwitch)
             instanceCountLabel.text = String(format: "%.0f", sender.value)
+            setupReplicatorLayer()
         case instanceDelaySlider:
             if sender.value > 0.0 {
                 replicatorLayer.instanceDelay = CFTimeInterval(sender.value/Float(replicatorLayer.instanceCount))
@@ -128,7 +129,7 @@ class CAReplicatorLayerController: UIViewController {
     func offsetValueForSwitch(offsetSwitch: UISwitch) -> Float {
         if offsetSwitch == fadeAlphaSwitch {
             let count = Float(replicatorLayer.instanceCount)
-            return offsetSwitch.isOn ? -1.0/count : 0.0
+            return offsetSwitch.isOn ? -1.0 / count : 0.0
         } else {
             return offsetSwitch.isOn ? 0.0 : -0.05
         }
