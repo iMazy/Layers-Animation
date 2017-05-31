@@ -10,7 +10,7 @@ import UIKit
 
 class CATiledLayerController: UIViewController {
 
-    @IBOutlet weak var viewForLayer: UIView!
+    @IBOutlet weak var viewForTiledLayer: TilingView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var fadeDurationSlider: UISlider!
     @IBOutlet weak var fadeDurationSliderValueLabel: UILabel!
@@ -23,8 +23,13 @@ class CATiledLayerController: UIViewController {
     @IBOutlet weak var zoomScaleSlider: UISlider!
     @IBOutlet weak var zoomScaleSliderValueLabel: UILabel!
     
+    var tiledLayer: TiledLayer {
+        return viewForTiledLayer.layer as! TiledLayer
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
 
     }
 

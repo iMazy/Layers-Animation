@@ -10,6 +10,7 @@
 		210A51EA1EDEAC62009A5F76 /* CATiledLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210A51E91EDEAC62009A5F76 /* CATiledLayerController.swift */; };
 		210A51EC1EDEB53E009A5F76 /* TiledLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210A51EB1EDEB53E009A5F76 /* TiledLayer.swift */; };
 		210A51EE1EDEB67D009A5F76 /* TilingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210A51ED1EDEB67D009A5F76 /* TilingView.swift */; };
+		210A51F01EDEC426009A5F76 /* TilingViewForImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210A51EF1EDEC426009A5F76 /* TilingViewForImage.swift */; };
 		21443D291ED56E1700D3EDE5 /* ScrollingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21443D281ED56E1700D3EDE5 /* ScrollingView.swift */; };
 		21443D2C1ED574B200D3EDE5 /* CAScrollLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21443D2B1ED574B200D3EDE5 /* CAScrollLayerController.swift */; };
 		21443D2E1ED6AFAA00D3EDE5 /* CATextLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21443D2D1ED6AFAA00D3EDE5 /* CATextLayerController.swift */; };
@@ -31,6 +32,7 @@
 		210A51E91EDEAC62009A5F76 /* CATiledLayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATiledLayerController.swift; sourceTree = "<group>"; };
 		210A51EB1EDEB53E009A5F76 /* TiledLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TiledLayer.swift; sourceTree = "<group>"; };
 		210A51ED1EDEB67D009A5F76 /* TilingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TilingView.swift; sourceTree = "<group>"; };
+		210A51EF1EDEC426009A5F76 /* TilingViewForImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TilingViewForImage.swift; sourceTree = "<group>"; };
 		21443D281ED56E1700D3EDE5 /* ScrollingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingView.swift; sourceTree = "<group>"; };
 		21443D2B1ED574B200D3EDE5 /* CAScrollLayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAScrollLayerController.swift; sourceTree = "<group>"; };
 		21443D2D1ED6AFAA00D3EDE5 /* CATextLayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATextLayerController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				21443D281ED56E1700D3EDE5 /* ScrollingView.swift */,
 				210A51EB1EDEB53E009A5F76 /* TiledLayer.swift */,
 				210A51ED1EDEB67D009A5F76 /* TilingView.swift */,
+				210A51EF1EDEC426009A5F76 /* TilingViewForImage.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			files = (
 				21443D2E1ED6AFAA00D3EDE5 /* CATextLayerController.swift in Sources */,
 				21443D2C1ED574B200D3EDE5 /* CAScrollLayerController.swift in Sources */,
+				210A51F01EDEC426009A5F76 /* TilingViewForImage.swift in Sources */,
 				21443D291ED56E1700D3EDE5 /* ScrollingView.swift in Sources */,
 				2179383C1ED2E88A007DBE43 /* ViewController.swift in Sources */,
 				2179384F1ED2EE17007DBE43 /* UIImage+TileCutter.swift in Sources */,

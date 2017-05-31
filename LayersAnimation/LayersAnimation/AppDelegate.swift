@@ -33,8 +33,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 设置所有 UIControl 的 颜色为全局色
         UIControl.appearance().tintColor = globalColor
         
+        // 截取图片,将一张大图截取成若干小图
+        let size = CGSize(width: sideLength, height: sideLength)
+        UIImage.saveTileOfSize(size, name: fileName)
         return true
     }
 
+    
 }
 

@@ -1424,31 +1424,31 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gf-K2-bcm">
                                 <rect key="frame" x="50" y="70" width="275" height="275"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZ9-Cf-KJ2">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZ9-Cf-KJ2">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="275"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ag-fO-dS5">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ag-fO-dS5" customClass="TilingView" customModule="LayersAnimation" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="275" height="275"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="2Ag-fO-dS5" secondAttribute="bottom" id="0Pq-FJ-kaa"/>
-                                            <constraint firstItem="2Ag-fO-dS5" firstAttribute="top" secondItem="NZ9-Cf-KJ2" secondAttribute="top" id="GI4-0N-kf0"/>
-                                            <constraint firstAttribute="trailing" secondItem="2Ag-fO-dS5" secondAttribute="trailing" id="Ill-3g-wJm"/>
-                                            <constraint firstItem="2Ag-fO-dS5" firstAttribute="height" secondItem="NZ9-Cf-KJ2" secondAttribute="height" id="gOw-C4-87E"/>
-                                            <constraint firstItem="2Ag-fO-dS5" firstAttribute="width" secondItem="NZ9-Cf-KJ2" secondAttribute="width" id="iqy-Om-y1a"/>
-                                            <constraint firstItem="2Ag-fO-dS5" firstAttribute="leading" secondItem="NZ9-Cf-KJ2" secondAttribute="leading" id="jDw-x4-mo7"/>
+                                            <constraint firstAttribute="trailing" secondItem="2Ag-fO-dS5" secondAttribute="trailing" id="7ry-4C-EjV"/>
+                                            <constraint firstAttribute="bottom" secondItem="2Ag-fO-dS5" secondAttribute="bottom" id="YDs-Ec-DRf"/>
+                                            <constraint firstItem="2Ag-fO-dS5" firstAttribute="top" secondItem="NZ9-Cf-KJ2" secondAttribute="top" id="dh4-Wi-ckG"/>
+                                            <constraint firstItem="2Ag-fO-dS5" firstAttribute="leading" secondItem="NZ9-Cf-KJ2" secondAttribute="leading" id="tRa-sO-Joc"/>
                                         </constraints>
                                     </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="NZ9-Cf-KJ2" firstAttribute="top" secondItem="1gf-K2-bcm" secondAttribute="top" id="8nw-z8-C0C"/>
+                                    <constraint firstAttribute="bottom" secondItem="NZ9-Cf-KJ2" secondAttribute="bottom" id="6pz-ej-vKY"/>
+                                    <constraint firstAttribute="trailing" secondItem="NZ9-Cf-KJ2" secondAttribute="trailing" id="8QE-sf-pQT"/>
                                     <constraint firstAttribute="width" secondItem="1gf-K2-bcm" secondAttribute="height" id="HWR-md-igU"/>
-                                    <constraint firstAttribute="trailing" secondItem="NZ9-Cf-KJ2" secondAttribute="trailing" id="aao-7N-xOK"/>
-                                    <constraint firstItem="NZ9-Cf-KJ2" firstAttribute="leading" secondItem="1gf-K2-bcm" secondAttribute="leading" id="lP7-tX-giN"/>
-                                    <constraint firstAttribute="bottom" secondItem="NZ9-Cf-KJ2" secondAttribute="bottom" id="vVO-cP-Md3"/>
+                                    <constraint firstItem="NZ9-Cf-KJ2" firstAttribute="leading" secondItem="1gf-K2-bcm" secondAttribute="leading" id="S70-b6-Qyx"/>
+                                    <constraint firstItem="2Ag-fO-dS5" firstAttribute="height" secondItem="1gf-K2-bcm" secondAttribute="height" id="Yef-NT-BZ7"/>
+                                    <constraint firstItem="NZ9-Cf-KJ2" firstAttribute="top" secondItem="1gf-K2-bcm" secondAttribute="top" id="b4y-y6-Ie7"/>
+                                    <constraint firstItem="2Ag-fO-dS5" firstAttribute="width" secondItem="1gf-K2-bcm" secondAttribute="width" id="pgA-D7-Yfc"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="K6b-Pl-hii">
@@ -1622,7 +1622,7 @@
                         <outlet property="scrollView" destination="NZ9-Cf-KJ2" id="djq-UT-0vJ"/>
                         <outlet property="tileSizeSlider" destination="KQP-q0-VD4" id="aLj-cO-5jp"/>
                         <outlet property="tileSizeSliderValueLabel" destination="I1E-My-QeM" id="9gE-Jk-XD2"/>
-                        <outlet property="viewForLayer" destination="2Ag-fO-dS5" id="gRC-JL-EBg"/>
+                        <outlet property="viewForTiledLayer" destination="2Ag-fO-dS5" id="fia-VX-3GC"/>
                         <outlet property="zoomScaleSlider" destination="8Za-bd-r3t" id="xn6-Bo-XKX"/>
                         <outlet property="zoomScaleSliderValueLabel" destination="IDM-nj-Msl" id="R3W-Ew-5d1"/>
                     </connections>
