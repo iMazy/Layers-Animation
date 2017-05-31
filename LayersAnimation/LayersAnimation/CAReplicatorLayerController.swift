@@ -33,6 +33,9 @@ class CAReplicatorLayerController: UIViewController {
     let fadeAnimation = CABasicAnimation(keyPath: "opacity")
     let lengthMultiplier: CGFloat = 3.0
     
+    let pointLayer = CALayer()
+    let staticPointLayer = CALayer()
+    
     func setupLayerFadeAnimation() {
         fadeAnimation.fromValue = 1.0
         fadeAnimation.toValue = 0.0
@@ -40,15 +43,21 @@ class CAReplicatorLayerController: UIViewController {
     }
     
     func setupReplicatorLayer() {
+        
+        /// 设置尺寸
         replicatorLayer.frame = viewForLayer.bounds
+        /// 设置放射数量
         let count = instanceCountSlider.value
         replicatorLayer.instanceCount = Int(count)
         replicatorLayer.preservesDepth = false
+        /// 默认颜色
         replicatorLayer.instanceColor = UIColor.white.cgColor
+        /// 颜色设置
         replicatorLayer.instanceRedOffset = offsetValueForSwitch(offsetSwitch: fadeRedSwitch)
         replicatorLayer.instanceBlueOffset = offsetValueForSwitch(offsetSwitch: fadeBlueSwitch)
         replicatorLayer.instanceGreenOffset = offsetValueForSwitch(offsetSwitch: fadeGreenSwitch)
         replicatorLayer.instanceAlphaOffset = offsetValueForSwitch(offsetSwitch: fadeAlphaSwitch)
+        /// 旋转角度 360度
         let angle = Float(M_PI*2.0)/count
         replicatorLayer.instanceTransform = CATransform3DMakeRotation(CGFloat(angle), 0.0, 0.0, 1.0)
     }
@@ -57,7 +66,26 @@ class CAReplicatorLayerController: UIViewController {
         let layerWidth = CGFloat(layerSizeSlider.value)
         let midX = viewForLayer.bounds.midX - layerWidth/2.0
         instanceLayer.frame = CGRect(x: midX, y: 0.0, width: layerWidth, height: layerWidth*lengthMultiplier)
+        // 转动视图的颜色
         instanceLayer.backgroundColor = UIColor.white.cgColor
+    }
+    
+    func setupPointLayer() {
+        let layerWidth: CGFloat = 10.0
+        let midX = viewForLayer.bounds.midX - layerWidth/2.0
+        let maxY = viewForLayer.bounds.height/4
+        pointLayer.frame = CGRect(x: midX, y: maxY, width: layerWidth, height: layerWidth)
+        pointLayer.cornerRadius = layerWidth/2
+        pointLayer.backgroundColor = UIColor.red.cgColor
+    }
+    
+    func setupStaticPointLayer() {
+        let layerWidth: CGFloat = 10.0
+        let midX = viewForLayer.bounds.maxY - layerWidth/2.0
+        let maxY = viewForLayer.bounds.height/4
+        staticPointLayer.frame = CGRect(x: midX, y: maxY, width: layerWidth, height: layerWidth)
+        staticPointLayer.cornerRadius = layerWidth/2
+        staticPointLayer.backgroundColor = UIColor.red.cgColor
     }
     
     override func viewDidLoad() {
@@ -68,6 +96,13 @@ class CAReplicatorLayerController: UIViewController {
         
         setupInstanceLayer()
         replicatorLayer.addSublayer(instanceLayer)
+        
+        setupPointLayer()
+        replicatorLayer.addSublayer(pointLayer)
+        
+        /// 设置ding
+        setupStaticPointLayer()
+        replicatorLayer.addSublayer(staticPointLayer)
         
         setupLayerFadeAnimation()
         
@@ -120,10 +155,14 @@ class CAReplicatorLayerController: UIViewController {
         }
     }
     
+    /// 设置子 layer 动画
     func setLayerFadeAnimation() {
         instanceLayer.opacity = 0.0
         fadeAnimation.duration = CFTimeInterval(instanceDelaySlider.value)
         instanceLayer.add(fadeAnimation, forKey: "FadeAnimation")
+        
+        pointLayer.opacity = 0.0
+        pointLayer.add(fadeAnimation, forKey: "FadeAnimation")
     }
     
     func offsetValueForSwitch(offsetSwitch: UISwitch) -> Float {
