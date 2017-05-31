@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		210A51EA1EDEAC62009A5F76 /* CATiledLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210A51E91EDEAC62009A5F76 /* CATiledLayerController.swift */; };
+		210A51EC1EDEB53E009A5F76 /* TiledLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210A51EB1EDEB53E009A5F76 /* TiledLayer.swift */; };
+		210A51EE1EDEB67D009A5F76 /* TilingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210A51ED1EDEB67D009A5F76 /* TilingView.swift */; };
 		21443D291ED56E1700D3EDE5 /* ScrollingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21443D281ED56E1700D3EDE5 /* ScrollingView.swift */; };
 		21443D2C1ED574B200D3EDE5 /* CAScrollLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21443D2B1ED574B200D3EDE5 /* CAScrollLayerController.swift */; };
 		21443D2E1ED6AFAA00D3EDE5 /* CATextLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21443D2D1ED6AFAA00D3EDE5 /* CATextLayerController.swift */; };
@@ -27,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		210A51E91EDEAC62009A5F76 /* CATiledLayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATiledLayerController.swift; sourceTree = "<group>"; };
+		210A51EB1EDEB53E009A5F76 /* TiledLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TiledLayer.swift; sourceTree = "<group>"; };
+		210A51ED1EDEB67D009A5F76 /* TilingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TilingView.swift; sourceTree = "<group>"; };
 		21443D281ED56E1700D3EDE5 /* ScrollingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingView.swift; sourceTree = "<group>"; };
 		21443D2B1ED574B200D3EDE5 /* CAScrollLayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAScrollLayerController.swift; sourceTree = "<group>"; };
 		21443D2D1ED6AFAA00D3EDE5 /* CATextLayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATextLayerController.swift; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 			children = (
 				2179383D1ED2E88A007DBE43 /* Main.storyboard */,
 				21443D281ED56E1700D3EDE5 /* ScrollingView.swift */,
+				210A51EB1EDEB53E009A5F76 /* TiledLayer.swift */,
+				210A51ED1EDEB67D009A5F76 /* TilingView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -209,9 +215,11 @@
 				2179384F1ED2EE17007DBE43 /* UIImage+TileCutter.swift in Sources */,
 				644F699A1ED46B6100B53943 /* CALayerControlsController.swift in Sources */,
 				21443D301ED7D41000D3EDE5 /* AVPlayerLayerController.swift in Sources */,
+				210A51EC1EDEB53E009A5F76 /* TiledLayer.swift in Sources */,
 				21BEA3A41EDD40650093FEFB /* CAReplicatorLayerController.swift in Sources */,
 				21443D341ED8087B00D3EDE5 /* CAGradientLayerController.swift in Sources */,
 				21C286221ED3C264009D65D0 /* CALayerViewController.swift in Sources */,
+				210A51EE1EDEB67D009A5F76 /* TilingView.swift in Sources */,
 				210A51EA1EDEAC62009A5F76 /* CATiledLayerController.swift in Sources */,
 				2179383A1ED2E88A007DBE43 /* AppDelegate.swift in Sources */,
 			);
