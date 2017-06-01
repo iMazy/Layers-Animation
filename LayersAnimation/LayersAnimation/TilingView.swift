@@ -22,7 +22,7 @@ class TilingView: UIView {
         
         guard let layer = self.layer as? TiledLayer else { return nil }
         layer.contentsScale = UIScreen.main.scale
-//        layer.tileSize = CGSize(width: sideLength, height: sideLength)
+        layer.tileSize = CGSize(width: sideLength, height: sideLength)
         
     }
 
