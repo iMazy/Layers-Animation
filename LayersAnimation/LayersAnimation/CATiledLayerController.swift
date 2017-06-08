@@ -32,12 +32,21 @@ class CATiledLayerController: UIViewController {
         
         scrollView.delegate = self
         scrollView.contentSize = scrollView.frame.size
+        
         updateZoomScaleSliderValueLabel()
         updateTiledSizeSliderValueLabel()
         updateDetailBiasSliderValueLabel()
         updateFadeDurationSliderValueLabel()
         updateLevelsOfDetailSliderValueLabel()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "大图", style: .plain, target: self, action: #selector(toTilingView))
 
+    }
+    
+    func toTilingView() {
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tilingImageView")
+        navigationController?.show(vc, sender: nil)
     }
 
     deinit {
@@ -93,10 +102,6 @@ class CATiledLayerController: UIViewController {
     func updateZoomScaleSliderValueLabel() {
         zoomScaleSliderValueLabel.text = "\(CGFloat(scrollView.zoomScale))"
     }
-    
-    
-    
-    
     
 }
 

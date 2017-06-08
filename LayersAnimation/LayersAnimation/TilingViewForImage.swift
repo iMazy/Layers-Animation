@@ -9,7 +9,7 @@
 import UIKit
 
 let sideLength = CGFloat(640.0)
-let fileName = "Lion"
+let fileName = "RicePaddy"
 
 class TilingViewForImage: UIView {
 
@@ -47,7 +47,7 @@ class TilingViewForImage: UIView {
     }
     
     func imageForTileAtColumn(column: Int, row: Int) -> UIImage? {
-        let filePath = "\(cachePath)\(fileName)_\(column)_\(row)"
+        let filePath = "\(cachePath)/\(fileName)_\(column)_\(row)"
         return UIImage(contentsOfFile: filePath)
     }
 
