@@ -1444,24 +1444,24 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eqf-WF-eGI">
-                                                <rect key="frame" x="90" y="0.0" width="51" height="31"/>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Eqf-WF-eGI">
+                                                <rect key="frame" x="90" y="0.0" width="2" height="31"/>
                                                 <connections>
                                                     <action selector="closePathSwitchValueChanged:" destination="DUU-A7-oct" eventType="valueChanged" id="6Ke-c1-VCW"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color(hue)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qj6-fa-3Ho">
-                                                <rect key="frame" x="149" y="0.0" width="107" height="31"/>
+                                                <rect key="frame" x="100" y="0.0" width="63" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2BS-2b-PDU">
-                                                <rect key="frame" x="266" y="0.0" width="51" height="31"/>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="0.0" maxValue="359" translatesAutoresizingMaskIntoConstraints="NO" id="fhU-Hj-OQY">
+                                                <rect key="frame" x="171" y="0.0" width="146" height="32"/>
                                                 <connections>
-                                                    <action selector="colorSwitchValueChanged:" destination="DUU-A7-oct" eventType="valueChanged" id="iK1-BS-zl2"/>
+                                                    <action selector="huiSliderValueChanged:" destination="DUU-A7-oct" eventType="valueChanged" id="djQ-O5-bwK"/>
                                                 </connections>
-                                            </switch>
+                                            </slider>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FG2-31-dIc">
@@ -1473,7 +1473,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hQj-cf-VfU">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hQj-cf-VfU">
                                                 <rect key="frame" x="31" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="fillSwitchValueChanged:" destination="DUU-A7-oct" eventType="valueChanged" id="giW-iZ-Q8x"/>
@@ -1524,7 +1524,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6RC-q6-F0i">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6RC-q6-F0i">
                                                 <rect key="frame" x="315" y="0.0" width="2" height="31"/>
                                                 <connections>
                                                     <action selector="dashedSwitchValueChanged:" destination="DUU-A7-oct" eventType="valueChanged" id="R8r-pR-ilf"/>
@@ -1595,6 +1595,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="closePathSwitch" destination="Eqf-WF-eGI" id="s85-T1-6vO"/>
+                        <outlet property="fillRuleSegmentControl" destination="cEe-Ua-FMX" id="SYs-Uk-S6d"/>
+                        <outlet property="fillSwitch" destination="hQj-cf-VfU" id="pHb-5H-Riq"/>
+                        <outlet property="hueSlider" destination="fhU-Hj-OQY" id="7h0-ps-p0F"/>
+                        <outlet property="lineCapSegmentControl" destination="FNl-mI-wwG" id="Hyi-Hf-wcc"/>
+                        <outlet property="lineJoinSegmentControl" destination="Ywe-JV-arT" id="rbF-tH-xA9"/>
                         <outlet property="lineWidthSlider" destination="4Xl-NU-n9N" id="Fz6-y9-JbH"/>
                         <outlet property="viewForSharpLayer" destination="kqm-Ov-vCv" id="bRq-lO-yhb"/>
                     </connections>
