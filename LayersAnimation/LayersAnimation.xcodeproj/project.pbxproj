@@ -26,6 +26,7 @@
 		2179384F1ED2EE17007DBE43 /* UIImage+TileCutter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2179384E1ED2EE17007DBE43 /* UIImage+TileCutter.swift */; };
 		21BEA3A41EDD40650093FEFB /* CAReplicatorLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA3A31EDD40650093FEFB /* CAReplicatorLayerController.swift */; };
 		21C286221ED3C264009D65D0 /* CALayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C286201ED3C264009D65D0 /* CALayerViewController.swift */; };
+		21E715231EE921C40026CBAC /* CAShapeLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E715221EE921C40026CBAC /* CAShapeLayerViewController.swift */; };
 		644F699A1ED46B6100B53943 /* CALayerControlsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644F69991ED46B6100B53943 /* CALayerControlsController.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		2179384E1ED2EE17007DBE43 /* UIImage+TileCutter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+TileCutter.swift"; sourceTree = "<group>"; };
 		21BEA3A31EDD40650093FEFB /* CAReplicatorLayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAReplicatorLayerController.swift; sourceTree = "<group>"; };
 		21C286201ED3C264009D65D0 /* CALayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayerViewController.swift; sourceTree = "<group>"; };
+		21E715221EE921C40026CBAC /* CAShapeLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAShapeLayerViewController.swift; sourceTree = "<group>"; };
 		644F69991ED46B6100B53943 /* CALayerControlsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayerControlsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +131,7 @@
 				21BEA3A31EDD40650093FEFB /* CAReplicatorLayerController.swift */,
 				210A51E91EDEAC62009A5F76 /* CATiledLayerController.swift */,
 				210BCF0F1EE910CF0074B7E5 /* CATiledImageLayerController.swift */,
+				21E715221EE921C40026CBAC /* CAShapeLayerViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				21443D341ED8087B00D3EDE5 /* CAGradientLayerController.swift in Sources */,
 				21C286221ED3C264009D65D0 /* CALayerViewController.swift in Sources */,
 				210A51EE1EDEB67D009A5F76 /* TilingView.swift in Sources */,
+				21E715231EE921C40026CBAC /* CAShapeLayerViewController.swift in Sources */,
 				210A51EA1EDEAC62009A5F76 /* CATiledLayerController.swift in Sources */,
 				2179383A1ED2E88A007DBE43 /* AppDelegate.swift in Sources */,
 			);

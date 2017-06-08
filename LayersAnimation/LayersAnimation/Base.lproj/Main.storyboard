@@ -1409,6 +1409,38 @@
             </objects>
             <point key="canvasLocation" x="132" y="1576.4617691154424"/>
         </scene>
+        <!--Shape Layer View Controller-->
+        <scene sceneID="S9F-9X-ThK">
+            <objects>
+                <viewController storyboardIdentifier="CAShapeLayer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DUU-A7-oct" customClass="CAShapeLayerViewController" customModule="LayersAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vEG-Ao-VMZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ywE-Wc-uRY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zEO-84-Yhh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kqm-Ov-vCv">
+                                <rect key="frame" x="62.5" y="50" width="250" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="EGz-an-bXc"/>
+                                    <constraint firstAttribute="width" constant="250" id="frP-r3-n2v"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kqm-Ov-vCv" firstAttribute="top" secondItem="vEG-Ao-VMZ" secondAttribute="bottom" constant="30" id="8M2-8y-144"/>
+                            <constraint firstItem="kqm-Ov-vCv" firstAttribute="centerX" secondItem="zEO-84-Yhh" secondAttribute="centerX" id="DL7-st-60c"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="49E-1J-qfz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="2304"/>
+        </scene>
         <!--Tiled Layer Controller-->
         <scene sceneID="xi3-aa-OVk">
             <objects>
