@@ -1509,7 +1509,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4Xl-NU-n9N">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="4Xl-NU-n9N">
                                                 <rect key="frame" x="83" y="0.0" width="164" height="32"/>
                                                 <connections>
                                                     <action selector="LineWidthSliderValueChanged:" destination="DUU-A7-oct" eventType="valueChanged" id="ioE-GO-Ber"/>
@@ -1595,6 +1595,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lineWidthSlider" destination="4Xl-NU-n9N" id="Fz6-y9-JbH"/>
                         <outlet property="viewForSharpLayer" destination="kqm-Ov-vCv" id="bRq-lO-yhb"/>
                     </connections>
                 </viewController>
