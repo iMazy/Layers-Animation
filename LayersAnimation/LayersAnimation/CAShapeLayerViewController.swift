@@ -9,27 +9,38 @@
 import UIKit
 
 class CAShapeLayerViewController: UIViewController {
+    
+    
+    @IBOutlet weak var viewForSharpLayer: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func closePathSwitchValueChanged(_ sender: UISwitch) {
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func colorSwitchValueChanged(_ sender: Any) {
     }
-    */
+
+    @IBAction func fillSwitchValueChanged(_ sender: UISwitch) {
+    }
+    
+    @IBAction func fillRuleSegmentControl(_ sender: UISegmentedControl) {
+    }
+    
+    @IBAction func LineWidthSliderValueChanged(_ sender: UISlider) {
+    }
+    
+    @IBAction func dashedSwitchValueChanged(_ sender: UISwitch) {
+    }
+    
+    @IBAction func lineCropSegmentControl(_ sender: UISegmentedControl) {
+    }
+    
+    @IBAction func lineJoinSegmentControl(_ sender: UISegmentedControl) {
+    }
 
 }
