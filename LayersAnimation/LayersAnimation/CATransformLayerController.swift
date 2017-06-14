@@ -69,8 +69,71 @@ class CATransformLayerController: UIViewController {
     
     @IBAction func colorAlphaValueChanged(_ sender: UISwitch) {
         
+        let alpha = sender.isOn ? reducedAlpha : 1.0
+        
+        switch colorAlphaSwitches.index(of: sender)! {
+        case Color.red.rawValue:
+            redColor = colorForColor(redColor, withAlpha: alpha)
+        case Color.orange.rawValue:
+            orangeColor = colorForColor(orangeColor, withAlpha: alpha)
+        case Color.yellow.rawValue:
+            yellowColor = colorForColor(yellowColor, withAlpha: alpha)
+        case Color.green.rawValue:
+            greenColor = colorForColor(greenColor, withAlpha: alpha)
+        case Color.bule.rawValue:
+            blueColor = colorForColor(blueColor, withAlpha: alpha)
+        case Color.purple.rawValue:
+            purpleColor = colorForColor(purpleColor, withAlpha: alpha)
+        default:
+            break
+        }
+        
+        transformLayer.removeFromSuperlayer()
+        buildCube()
     }
     
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let location = touches.first?.location(in: viewForTransformLayer) {
+            if trackBall != nil {
+                trackBall?.setStartPointFromLocation(location)
+            } else {
+                trackBall = TrackBall(with: location, inRect: viewForTransformLayer.bounds)
+            }
+            
+            for layer in transformLayer.sublayers! {
+                if layer.hitTest(location) != nil {
+                    showBoxTappedLabel()
+                   break
+                }
+            }
+        }
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let location = touches.first?.location(in: viewForTransformLayer) {
+            if let transform = trackBall?.rotationTransformForLocation(location) {
+                viewForTransformLayer.layer.sublayerTransform = transform
+            }
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let location = touches.first?.location(in: viewForTransformLayer) {
+            trackBall?.finalizeTrackBallForLocation(location)
+        }
+    }
+    
+    func showBoxTappedLabel() {
+        boxTappedLabel.alpha = 1.0
+        boxTappedLabel.isHidden = false
+        
+        UIView.animate(withDuration: 0.5, animations: { 
+            self.boxTappedLabel.alpha = 0.0
+        }) { [unowned self] (_) in
+            self.boxTappedLabel.isHidden = true
+        }
+    }
     
     func buildCube() {
         transformLayer = CATransformLayer()
