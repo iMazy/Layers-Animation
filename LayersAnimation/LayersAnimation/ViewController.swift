@@ -24,8 +24,8 @@ class ViewController: UIViewController {
                 ("CAReplicatorLayer", "Duplicate a source layer"),
                 ("CATiledLayer", "Asynchronously draw layer content in tiles"),
                 ("CAShapeLayer", "Draw using scalable vector paths"),
-                ("CAEAGLLayer", "Draw OpenGL content"),
                 ("CATransformLayer", "Draw 3D structures"),
+                ("CAEAGLLayer", "Draw OpenGL content"),
                 ("CAEmitterLayer", "Render animated particles")
             ]
         }

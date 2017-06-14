@@ -24,6 +24,7 @@
 		217938411ED2E88A007DBE43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 217938401ED2E88A007DBE43 /* Assets.xcassets */; };
 		217938441ED2E88A007DBE43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 217938421ED2E88A007DBE43 /* LaunchScreen.storyboard */; };
 		2179384F1ED2EE17007DBE43 /* UIImage+TileCutter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2179384E1ED2EE17007DBE43 /* UIImage+TileCutter.swift */; };
+		21B4B1151EF0CD01007A801F /* CATransformLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B4B1141EF0CD01007A801F /* CATransformLayerController.swift */; };
 		21BEA3A41EDD40650093FEFB /* CAReplicatorLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA3A31EDD40650093FEFB /* CAReplicatorLayerController.swift */; };
 		21C286221ED3C264009D65D0 /* CALayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C286201ED3C264009D65D0 /* CALayerViewController.swift */; };
 		21E715231EE921C40026CBAC /* CAShapeLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E715221EE921C40026CBAC /* CAShapeLayerViewController.swift */; };
@@ -50,6 +51,7 @@
 		217938431ED2E88A007DBE43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		217938451ED2E88A007DBE43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2179384E1ED2EE17007DBE43 /* UIImage+TileCutter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+TileCutter.swift"; sourceTree = "<group>"; };
+		21B4B1141EF0CD01007A801F /* CATransformLayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATransformLayerController.swift; sourceTree = "<group>"; };
 		21BEA3A31EDD40650093FEFB /* CAReplicatorLayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAReplicatorLayerController.swift; sourceTree = "<group>"; };
 		21C286201ED3C264009D65D0 /* CALayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayerViewController.swift; sourceTree = "<group>"; };
 		21E715221EE921C40026CBAC /* CAShapeLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAShapeLayerViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				210A51E91EDEAC62009A5F76 /* CATiledLayerController.swift */,
 				210BCF0F1EE910CF0074B7E5 /* CATiledImageLayerController.swift */,
 				21E715221EE921C40026CBAC /* CAShapeLayerViewController.swift */,
+				21B4B1141EF0CD01007A801F /* CATransformLayerController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21B4B1151EF0CD01007A801F /* CATransformLayerController.swift in Sources */,
 				21443D2E1ED6AFAA00D3EDE5 /* CATextLayerController.swift in Sources */,
 				21443D2C1ED574B200D3EDE5 /* CAScrollLayerController.swift in Sources */,
 				210BCF101EE910CF0074B7E5 /* CATiledImageLayerController.swift in Sources */,
