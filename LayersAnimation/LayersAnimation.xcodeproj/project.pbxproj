@@ -25,6 +25,7 @@
 		217938441ED2E88A007DBE43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 217938421ED2E88A007DBE43 /* LaunchScreen.storyboard */; };
 		2179384F1ED2EE17007DBE43 /* UIImage+TileCutter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2179384E1ED2EE17007DBE43 /* UIImage+TileCutter.swift */; };
 		21B4B1151EF0CD01007A801F /* CATransformLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B4B1141EF0CD01007A801F /* CATransformLayerController.swift */; };
+		21B4B1171EF0CF84007A801F /* TrackBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B4B1161EF0CF84007A801F /* TrackBall.swift */; };
 		21BEA3A41EDD40650093FEFB /* CAReplicatorLayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BEA3A31EDD40650093FEFB /* CAReplicatorLayerController.swift */; };
 		21C286221ED3C264009D65D0 /* CALayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C286201ED3C264009D65D0 /* CALayerViewController.swift */; };
 		21E715231EE921C40026CBAC /* CAShapeLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E715221EE921C40026CBAC /* CAShapeLayerViewController.swift */; };
@@ -52,6 +53,7 @@
 		217938451ED2E88A007DBE43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2179384E1ED2EE17007DBE43 /* UIImage+TileCutter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+TileCutter.swift"; sourceTree = "<group>"; };
 		21B4B1141EF0CD01007A801F /* CATransformLayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATransformLayerController.swift; sourceTree = "<group>"; };
+		21B4B1161EF0CF84007A801F /* TrackBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackBall.swift; sourceTree = "<group>"; };
 		21BEA3A31EDD40650093FEFB /* CAReplicatorLayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAReplicatorLayerController.swift; sourceTree = "<group>"; };
 		21C286201ED3C264009D65D0 /* CALayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayerViewController.swift; sourceTree = "<group>"; };
 		21E715221EE921C40026CBAC /* CAShapeLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAShapeLayerViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				2179384D1ED2E97C007DBE43 /* AppDelegate */,
+				21B4B1181EF0CF8E007A801F /* Model */,
 				21443D2A1ED56E2200D3EDE5 /* Views */,
 				2179384C1ED2E969007DBE43 /* ViewControllers */,
 				2179384B1ED2E955007DBE43 /* SystemFile */,
@@ -145,6 +148,14 @@
 				217938391ED2E88A007DBE43 /* AppDelegate.swift */,
 			);
 			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		21B4B1181EF0CF8E007A801F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				21B4B1161EF0CF84007A801F /* TrackBall.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +247,7 @@
 				21C286221ED3C264009D65D0 /* CALayerViewController.swift in Sources */,
 				210A51EE1EDEB67D009A5F76 /* TilingView.swift in Sources */,
 				21E715231EE921C40026CBAC /* CAShapeLayerViewController.swift in Sources */,
+				21B4B1171EF0CF84007A801F /* TrackBall.swift in Sources */,
 				210A51EA1EDEAC62009A5F76 /* CATiledLayerController.swift in Sources */,
 				2179383A1ED2E88A007DBE43 /* AppDelegate.swift in Sources */,
 			);
