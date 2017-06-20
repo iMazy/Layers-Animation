@@ -25,7 +25,6 @@ class ViewController: UIViewController {
                 ("CATiledLayer", "Asynchronously draw layer content in tiles"),
                 ("CAShapeLayer", "Draw using scalable vector paths"),
                 ("CATransformLayer", "Draw 3D structures"),
-                ("CAEAGLLayer", "Draw OpenGL content"),
                 ("CAEmitterLayer", "Render animated particles")
             ]
         }
@@ -46,6 +45,7 @@ class ViewController: UIViewController {
         
         // 让下一级页面的返回按钮只显示图标
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+
     }
 
 }
@@ -57,16 +57,19 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ClassCell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ClassCell", for: indexPath) as! MainTableViewCell
         let row = indexPath.row
-        cell.textLabel?.text = classes[row].0
-        cell.detailTextLabel?.text = classes[row].1
+        cell.iconImageView.image = UIImage(named: classes[row].0)
+        cell.mainTitleLabel.text = classes[row].0
+        cell.subTitleLabel.text = classes[row].1
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
+        if indexPath.row  == classes.count-1 {
+            return
+        }
         let identifier = classes[indexPath.row].0
         let targetVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: identifier)
         targetVC.title = identifier
