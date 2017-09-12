@@ -36,6 +36,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 截取图片,将一张大图截取成若干小图
         let size = CGSize(width: sideLength, height: sideLength)
         UIImage.saveTileOfSize(size, name: fileName)
+        
+        let overlayClass = NSClassFromString("UIDebuggingInformationOverlay") as? UIWindow.Type
+        _ = overlayClass?.perform(NSSelectorFromString("prepareDebuggingOverlay"))
+        
         return true
     }
 
