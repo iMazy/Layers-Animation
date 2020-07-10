@@ -58,11 +58,11 @@ class CAShapeLayerViewController: UIViewController {
     func setupShapeLayer() {
         shapeLayer.path = openPath.cgPath
         shapeLayer.fillColor = nil
-        shapeLayer.fillRule = kCAFillRuleNonZero
-        shapeLayer.lineCap = kCALineCapButt
+        shapeLayer.fillRule = CAShapeLayerFillRule.nonZero
+        shapeLayer.lineCap = CAShapeLayerLineCap.butt
         shapeLayer.lineDashPattern = nil
         shapeLayer.lineDashPhase = 0.0
-        shapeLayer.lineJoin = kCALineJoinMiter
+        shapeLayer.lineJoin = CAShapeLayerLineJoin.miter
         shapeLayer.lineWidth = CGFloat(lineWidthSlider.value)
         shapeLayer.miterLimit = 4.0
         shapeLayer.strokeColor = globalColor.cgColor
@@ -80,13 +80,13 @@ class CAShapeLayerViewController: UIViewController {
     @IBAction func closePathSwitchValueChanged(_ sender: UISwitch) {
         var selectedSegmentIndex: Int!
         if sender.isOn {
-            selectedSegmentIndex = UISegmentedControlNoSegment
+            selectedSegmentIndex = UISegmentedControl.noSegment
             shapeLayer.path = closePath.cgPath
         } else {
             switch shapeLayer.lineCap {
-            case kCALineCapButt:
+            case CAShapeLayerLineCap.butt:
                 selectedSegmentIndex = LineCap.buff.rawValue
-            case kCALineCapRound:
+            case CAShapeLayerLineCap.round:
                 selectedSegmentIndex = LineCap.round.rawValue
             default:
                 selectedSegmentIndex = LineCap.square.rawValue
@@ -110,13 +110,13 @@ class CAShapeLayerViewController: UIViewController {
         var selectedSegmentIndex: Int
         if sender.isOn {
             shapeLayer.fillColor = color.cgColor
-            if shapeLayer.fillRule == kCAFillRuleNonZero {
+            if shapeLayer.fillRule == CAShapeLayerFillRule.nonZero {
                 selectedSegmentIndex = FillRule.nonZero.rawValue
             } else {
                 selectedSegmentIndex = FillRule.evenOdd.rawValue
             }
         } else {
-            selectedSegmentIndex = UISegmentedControlNoSegment
+            selectedSegmentIndex = UISegmentedControl.noSegment
             shapeLayer.fillColor = nil
         }
         
@@ -127,10 +127,10 @@ class CAShapeLayerViewController: UIViewController {
         fillSwitch.isOn = true
         shapeLayer.fillColor = color.cgColor
         
-        var fillRule = kCAFillRuleNonZero
+        var fillRule = CAShapeLayerFillRule.nonZero
         
         if sender.selectedSegmentIndex != FillRule.nonZero.rawValue {
-            fillRule = kCAFillRuleEvenOdd
+            fillRule = CAShapeLayerFillRule.evenOdd
         }
         shapeLayer.fillRule = fillRule
     }
@@ -153,12 +153,12 @@ class CAShapeLayerViewController: UIViewController {
     
         closePathSwitch.isOn = false
         shapeLayer.path = openPath.cgPath
-        var lineCap = kCALineCapButt
+        var lineCap = CAShapeLayerLineCap.butt
         switch sender.selectedSegmentIndex {
         case LineCap.round.rawValue:
-            lineCap = kCALineCapRound
+            lineCap = CAShapeLayerLineCap.round
         case LineCap.square.rawValue:
-            lineCap = kCALineCapSquare
+            lineCap = CAShapeLayerLineCap.square
         default:
             break
         }
@@ -166,12 +166,12 @@ class CAShapeLayerViewController: UIViewController {
     }
     
     @IBAction func lineJoinSegmentControl(_ sender: UISegmentedControl) {
-        var lineJoin = kCALineJoinMiter
+        var lineJoin = CAShapeLayerLineJoin.miter
         switch sender.selectedSegmentIndex {
         case LineJoin.round.rawValue:
-            lineJoin = kCALineJoinRound
+            lineJoin = CAShapeLayerLineJoin.round
         case LineJoin.bevel.rawValue:
-            lineJoin = kCALineJoinBevel
+            lineJoin = CAShapeLayerLineJoin.bevel
         default:
             break
         }

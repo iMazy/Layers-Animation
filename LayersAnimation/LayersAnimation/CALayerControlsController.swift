@@ -43,7 +43,7 @@ class CALayerControlsController: UITableViewController {
         case linear, nearest, trilinear
     }
     
-    var contentsGravityValues = [kCAGravityCenter, kCAGravityTop, kCAGravityBottom, kCAGravityLeft, kCAGravityRight, kCAGravityTopLeft, kCAGravityTopRight, kCAGravityBottomLeft, kCAGravityBottomRight, kCAGravityResize, kCAGravityResizeAspect, kCAGravityResizeAspectFill] as [String]
+    var contentsGravityValues = [CALayerContentsGravity.center, CALayerContentsGravity.top, CALayerContentsGravity.bottom, CALayerContentsGravity.left, CALayerContentsGravity.right, CALayerContentsGravity.topLeft, CALayerContentsGravity.topRight, CALayerContentsGravity.bottomLeft, CALayerContentsGravity.bottomRight, CALayerContentsGravity.resize, CALayerContentsGravity.resizeAspect, CALayerContentsGravity.resizeAspectFill] //as [String]
     
     var contentsGravityPickerVisible = false
     
@@ -58,7 +58,7 @@ class CALayerControlsController: UITableViewController {
     
     @IBAction func switchChanged(_ sender: UISwitch) {
         // 获取点击的 switch 的索引
-        guard let theIndex = switches.index(of: sender),
+        guard let theIndex = switches.firstIndex(of: sender),
              // 获取当前的 switch 的位置
              let theSwitch = Switch(rawValue: theIndex) else { return }
         switch theSwitch {
@@ -73,7 +73,7 @@ class CALayerControlsController: UITableViewController {
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         // 获取索引
-        guard let theIndex = sliders.index(of: sender),
+        guard let theIndex = sliders.firstIndex(of: sender),
              // 获取当前 slider 的位置
              let theSlider = Slider(rawValue: theIndex) else { return }
         switch theSlider {
@@ -151,16 +151,16 @@ class CALayerControlsController: UITableViewController {
     
     @IBAction func magnificationSegmentedControlValueChanged(_ sender: UISegmentedControl) {
         let filter = MagnificationFilter(rawValue: sender.selectedSegmentIndex)!
-        var filterValue = ""
+        var filterValue: CALayerContentsFilter// = ""
         switch filter {
         case .linear:
-            filterValue = kCAFilterLinear
+            filterValue = CALayerContentsFilter.linear
         case .nearest:
-            filterValue = kCAFilterNearest
+            filterValue = CALayerContentsFilter.nearest
         case .trilinear:
-            filterValue = kCAFilterTrilinear
+            filterValue = CALayerContentsFilter.trilinear
         }
-        layerViewController.layer.magnificationFilter = filterValue
+        layerViewController.layer.magnificationFilter = filterValue //CALayerContentsFilter(rawValue: filterValue)
     }
     
     
@@ -221,7 +221,7 @@ extension CALayerControlsController {
     func showContentsGravityPicker() {
         contentsGravityPickerVisible = true
         relayoutTableViewCells()
-        let index = contentsGravityValues.index(of: layerViewController.layer.contentsGravity)
+        let index = contentsGravityValues.firstIndex(of: layerViewController.layer.contentsGravity)
         contentsGravityPicker.selectRow(index!, inComponent: 0, animated: false)
         contentsGravityPicker.isHidden = false
         contentsGravityPicker.alpha = 0
@@ -267,11 +267,11 @@ extension CALayerControlsController: UIPickerViewDelegate,UIPickerViewDataSource
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return contentsGravityValues[row]
+        return contentsGravityValues[row].rawValue
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         layerViewController.layer.contentsGravity = contentsGravityValues[row]
-        contentsGravityPickerValueLabel.text = layerViewController.layer.contentsGravity
+        contentsGravityPickerValueLabel.text = layerViewController.layer.contentsGravity.rawValue
     }
 }

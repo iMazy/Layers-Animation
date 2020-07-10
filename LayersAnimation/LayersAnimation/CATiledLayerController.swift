@@ -43,7 +43,7 @@ class CATiledLayerController: UIViewController {
 
     }
     
-    func toTilingView() {
+    @objc func toTilingView() {
         
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tilingImageView")
         navigationController?.show(vc, sender: nil)
@@ -57,7 +57,7 @@ class CATiledLayerController: UIViewController {
         TiledLayer.setFadeDuration(duration: CFTimeInterval(sender.value))
         updateFadeDurationSliderValueLabel()
         tiledLayer.contents = nil
-        tiledLayer.setNeedsDisplayIn(tiledLayer.bounds)
+        tiledLayer.setNeedsDisplay(tiledLayer.bounds)
     }
     
     

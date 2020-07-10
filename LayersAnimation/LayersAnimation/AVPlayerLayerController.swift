@@ -98,17 +98,17 @@ class AVPlayerLayerController: UIViewController {
                 break
             }
         } else {
-            rateSegmentControl.selectedSegmentIndex = UISegmentedControlNoSegment
+            rateSegmentControl.selectedSegmentIndex = UISegmentedControl.noSegment
         }
     }
     
     
     /// 播放结束通知
-    func playerDidReachEndNotificationHandler(_ notification: Notification) {
+    @objc func playerDidReachEndNotificationHandler(_ notification: Notification) {
         guard let playerItem = notification.object as? AVPlayerItem else {
             return
         }
-        playerItem.seek(to: kCMTimeZero)
+        playerItem.seek(to: CMTime.zero)
         
         if shouldLoop == false {
             player.pause()

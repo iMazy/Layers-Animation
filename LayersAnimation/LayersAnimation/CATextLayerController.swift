@@ -57,8 +57,8 @@ class CATextLayerController: UIViewController {
         textLayer.font = helveticaFont
         textLayer.foregroundColor = UIColor.darkGray.cgColor
         textLayer.isWrapped = true
-        textLayer.alignmentMode = kCAAlignmentLeft
-        textLayer.truncationMode = kCATruncationEnd
+        textLayer.alignmentMode = CATextLayerAlignmentMode.left
+        textLayer.truncationMode = CATextLayerTruncationMode.end
         textLayer.contentsScale = UIScreen.main.scale
     }
     
@@ -103,13 +103,13 @@ class CATextLayerController: UIViewController {
     
     @IBAction func wrapTextSwitchChanged(_ sender: UISwitch) {
         alignmentModeSegmentedControl.selectedSegmentIndex = AlignmentMode.left.rawValue
-        textLayer.alignmentMode = kCAAlignmentLeft
+        textLayer.alignmentMode = CATextLayerAlignmentMode.left
         
         if sender.isOn {
             if let truncationMode = TruncationMode(rawValue: truncationModeSegmentedControl.selectedSegmentIndex) {
                 previouslySelectedTrunctionMode = truncationMode
             }
-            truncationModeSegmentedControl.selectedSegmentIndex = UISegmentedControlNoSegment
+            truncationModeSegmentedControl.selectedSegmentIndex = UISegmentedControl.noSegment
             textLayer.isWrapped = true
         } else {
             textLayer.isWrapped = false
@@ -120,20 +120,20 @@ class CATextLayerController: UIViewController {
     @IBAction func alignmentModeSegmentedControlChanged(_ sender: UISegmentedControl) {
         wrapTextSwitch.isOn = true
         textLayer.isWrapped = true
-        truncationModeSegmentedControl.selectedSegmentIndex = UISegmentedControlNoSegment
-        textLayer.truncationMode = kCATruncationNone
+        truncationModeSegmentedControl.selectedSegmentIndex = UISegmentedControl.noSegment
+        textLayer.truncationMode = CATextLayerTruncationMode.none
         
         switch sender.selectedSegmentIndex {
         case AlignmentMode.left.rawValue:
-            textLayer.alignmentMode = kCAAlignmentLeft
+            textLayer.alignmentMode = CATextLayerAlignmentMode.left
         case AlignmentMode.center.rawValue:
-            textLayer.alignmentMode = kCAAlignmentCenter
+            textLayer.alignmentMode = CATextLayerAlignmentMode.center
         case AlignmentMode.justified.rawValue:
-            textLayer.alignmentMode = kCAAlignmentJustified
+            textLayer.alignmentMode = CATextLayerAlignmentMode.justified
         case AlignmentMode.right.rawValue:
-            textLayer.alignmentMode = kCAAlignmentRight
+            textLayer.alignmentMode = CATextLayerAlignmentMode.right
         default:
-            textLayer.alignmentMode = kCAAlignmentLeft
+            textLayer.alignmentMode = CATextLayerAlignmentMode.left
             break
         }
     }
@@ -141,18 +141,18 @@ class CATextLayerController: UIViewController {
     @IBAction func truncationModeSegmentedControlChanged(_ sender: UISegmentedControl) {
         wrapTextSwitch.isOn = false
         textLayer.isWrapped = false
-        alignmentModeSegmentedControl.selectedSegmentIndex = UISegmentedControlNoSegment
-        textLayer.alignmentMode = kCAAlignmentLeft
+        alignmentModeSegmentedControl.selectedSegmentIndex = UISegmentedControl.noSegment
+        textLayer.alignmentMode = CATextLayerAlignmentMode.left
         
         switch sender.selectedSegmentIndex {
         case TruncationMode.start.rawValue:
-            textLayer.truncationMode = kCATruncationStart
+            textLayer.truncationMode = CATextLayerTruncationMode.start
         case TruncationMode.middle.rawValue:
-            textLayer.truncationMode = kCATruncationMiddle
+            textLayer.truncationMode = CATextLayerTruncationMode.middle
         case TruncationMode.end.rawValue:
-            textLayer.truncationMode = kCATruncationEnd
+            textLayer.truncationMode = CATextLayerTruncationMode.end
         default:
-            textLayer.truncationMode = kCATruncationNone
+            textLayer.truncationMode = CATextLayerTruncationMode.none
         }
     }
    

@@ -48,7 +48,7 @@ class CATransformLayerController: UIViewController {
     func setupSwipeMeTextLayer() {
         swipeMeTextLayer.frame = CGRect(x: 0.0, y: sideLength/4.0, width: sideLength, height: sideLength/2.0)
         swipeMeTextLayer.string = "Swipe Me"
-        swipeMeTextLayer.alignmentMode = kCAAlignmentCenter
+        swipeMeTextLayer.alignmentMode = CATextLayerAlignmentMode.center
         swipeMeTextLayer.foregroundColor = UIColor.white.cgColor
         let fontName = "Noteworthy-Light" as CFString
         let fontRef = CTFontCreateWithName(fontName, 24.0, nil)
@@ -71,7 +71,7 @@ class CATransformLayerController: UIViewController {
         
         let alpha = sender.isOn ? reducedAlpha : 1.0
         
-        switch colorAlphaSwitches.index(of: sender)! {
+        switch colorAlphaSwitches.firstIndex(of: sender)! {
         case Color.red.rawValue:
             redColor = colorForColor(redColor, withAlpha: alpha)
         case Color.orange.rawValue:

@@ -23,7 +23,7 @@ class CAScrollLayerController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scrollingViewLayer.scrollMode = kCAScrollBoth
+        scrollingViewLayer.scrollMode = CAScrollLayerScrollMode.both
     }
 
     
@@ -52,13 +52,13 @@ class CAScrollLayerController: UIViewController {
     @IBAction func scrollingSwitchChanged(_ sender: UISwitch) {
         switch (horizontalScrollingSwitch.isOn, verticalScrollingSwitch.isOn) {
         case (true, true):
-            scrollingViewLayer.scrollMode = kCAScrollBoth
+            scrollingViewLayer.scrollMode = CAScrollLayerScrollMode.both
         case (true, false):
-            scrollingViewLayer.scrollMode = kCAScrollHorizontally
+            scrollingViewLayer.scrollMode = CAScrollLayerScrollMode.horizontally
         case (false, true):
-            scrollingViewLayer.scrollMode = kCAScrollVertically
+            scrollingViewLayer.scrollMode = CAScrollLayerScrollMode.vertically
         default:
-            scrollingViewLayer.scrollMode = kCAScrollNone
+            scrollingViewLayer.scrollMode = CAScrollLayerScrollMode.none
         }
     }
 

@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // 设置 UILabel 的全局属性
         UILabel.appearance().font = UIFont(name: "Avenir-Light", size: 17.0)
@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 设置导航栏属性
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().barTintColor = globalColor
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white,NSFontAttributeName: UIFont(name: "Avenir-Light", size: 20.0)!]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,NSAttributedString.Key.font: UIFont(name: "Avenir-Light", size: 20.0)!]
         // 设置 tableView 的全局属性
         UITableView.appearance().separatorColor = globalColor
         // 设置 tableViewCell的分割线偏移为0
